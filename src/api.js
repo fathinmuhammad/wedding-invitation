@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "https://script.google.com/macros/s/AKfycbzpAtQsG1ZxoXOgSXcePCmEQ1C1hxqFOFCsvwhY1zJYJFl7hE-tCW-U3vs7wWFgnkpbuQ/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycbx2EbJONl7qgdwNY5xEsM6LKpQoSgwSTJYL1HVBJsmd-t7GM0D-AaoJ0TlLnbo3T6q7Gg/exec";
 
 export const fetchComments = async () => {
   try {
