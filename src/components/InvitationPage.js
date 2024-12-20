@@ -43,7 +43,7 @@ const InvitationPage = ({ onOpen }) => {
           fontSize: '1.5rem',
           marginBottom: '0.5rem',
           fontFamily: "'Playfair Display', serif"
-        }}>The Wedding of Test</h2>
+        }}>The Wedding of</h2>
         <h1 style={{
           color: '#4682B4',
           fontSize: '2.5rem',
