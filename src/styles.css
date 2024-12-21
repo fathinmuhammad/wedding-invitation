@@ -189,6 +189,158 @@
     margin-top: 20px;
   }
 
+  .invitation-details {
+    min-height: 100vh;
+    background: linear-gradient(rgba(240, 248, 255, 0.9), rgba(176, 216, 255, 0.9));
+    font-family: "Playfair Display", serif;
+    padding: 2rem 1rem;
+    position: relative;
+    text-align: center;
+  }
+  
+  .invitation-section {
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(135, 206, 235, 0.2);
+    background: rgba(255, 255, 255, 0.95);
+    position: relative;
+    padding: 1.5rem;
+  }
+  
+  .flower-frame-top-left {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background-image: url("/src/assets/images/FrameTopLeft.png");
+    background-size: cover;
+    z-index: 1;
+  }
+
+  .flower-frame-top-right {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background-image: url("/src/assets/images/FrameTopRight.png");
+    background-size: cover;
+    z-index: 1;
+  }
+
+  .flower-frame-bottom-left {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background-image: url("/src/assets/images/FrameBottomLeft.png");
+    background-size: cover;
+    z-index: 1;
+  }
+
+  .flower-frame-bottom-right {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background-image: url("/src/assets/images/FrameBottomRight.png");
+    background-size: cover;
+    z-index: 1;
+  }
+  
+  .flower-top-left {
+    top: -20px;
+    left: -20px;
+  }
+  
+  .flower-top-right {
+    top: -20px;
+    right: -20px;
+  }
+  
+  .flower-bottom-left {
+    bottom: -20px;
+    left: -20px;
+  }
+  
+  .flower-bottom-right {
+    bottom: -20px;
+    right: -20px;
+  }
+  
+  .content {
+    position: relative;
+    z-index: 2;
+    backdrop-filter: blur(5px);
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    color: #4682b4;
+    text-shadow: 2px 2px 4px rgba(135, 206, 235, 0.2);
+    margin: 1rem 0;
+  }
+  
+  .profile-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0 5px 15px rgba(135, 206, 235, 0.3);
+    margin: 1.5rem 0;
+  }
+  
+  .subtitle {
+    font-size: 2.5rem;
+    color: #5f9ea0;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin: 1rem 0;
+  }
+  
+  .wedding-date {
+    font-size: 1.25rem;
+    color: #778899;
+    font-style: italic;
+    margin: 0.5rem 0;
+  }
+  
+  .save-date-btn button {
+    background: #87ceeb;
+    color: white;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(135, 206, 235, 0.2);
+  }
+  
+  .save-date-btn button:hover {
+    background: #4682b4;
+    transform: scale(1.05);
+  }
+  
+  .scroll-indicator {
+    width: 24px;
+    height: 40px;
+    margin: 1rem auto;
+    border: 2px solid #b0e0e6;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(176, 224, 230, 0.3);
+  }
+  
+  .scroll-animation {
+    width: 4px;
+    height: 8px;
+    background: linear-gradient(180deg, #87ceeb, #b0e0e6);
+    margin: 4px auto;
+    border-radius: 2px;
+  }
+  
+  .scroll-text {
+    font-size: 0.95rem;
+    color: #4682b4;
+    font-weight: 500;
+    margin: 0.5rem 0;
+  }
+  
   
   .gallery-item {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -197,5 +349,44 @@
   .gallery-item:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .bottom-nav {
+    position: fixed;
+    bottom: 10px; /* Menyesuaikan posisi untuk tidak terlalu ke bawah */
+    left: 50%; /* Menyesuaikan posisi untuk berada di tengah */
+    transform: translateX(-50%); /* Menyesuaikan posisi untuk berada di tengah */
+    width: 90%;
+    /* background: linear-gradient(180deg, #87CEEB, #B0E0E6); */
+    background: #ffffff;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1), 0 0 10px rgba(0, 0, 0, 0.1); /* Menambahkan shadow */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5rem 0;
+    z-index: 1000;
+    border-radius: 20px; /* Membuat tampilan menjadi rounded agar tidak terlihat kaku */
+    font-size: 0.8rem; /* Membuat tampilan menjadi tidak terlalu besar */
+  }
+  
+  .bottom-nav .nav-item {
+    background-color: #87CEEB; /* Dominasi soft blue */
+    border-radius: 8px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .bottom-nav .nav-item:hover {
+    background-color: #B0E0E6; /* Gradasi soft blue */
+    transform: scale(1.1);
+  }
+  
+  .bottom-nav .nav-item i {
+    color: #4682B4; /* Steel blue untuk dominasi soft blue */
+    font-size: 1.5rem;
   }
   

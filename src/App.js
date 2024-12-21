@@ -9,6 +9,7 @@ import InvitationFirmanAllah from "./components/InvitationFirmanAllah";
 import InvitationWeddingDate from "./components/InvitationWeddingDate";
 import InvitationGalery from "./components/InvitationGalery";
 import InvitationEnd from "./components/InvitationEnd";
+import Navigation from "./components/Navigation";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,13 +40,22 @@ function App() {
           <div id="details">
             <InvitationDetails />
           </div>
-          <InvitationBridge />
+          <div id="bridge">
+            <InvitationBridge />
+          </div>
           <InvitationFirmanAllah />
-          <InvitationWeddingDate />
+          <div id="weddingDate">
+            <InvitationWeddingDate />
+          </div>
           <InvitationGalery />
-          <GiftSection />
-          <CommentForm />
+          <div id="giftSection">
+            <GiftSection />
+          </div>
+          <div id="commentForm">
+            <CommentForm />
+          </div>
           <InvitationEnd />
+          <Navigation />
         </>
       )}
     </motion.div>
