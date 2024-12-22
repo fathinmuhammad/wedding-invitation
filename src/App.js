@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import InvitationDetails from "./components/InvitationDetails";
 import GiftSection from "./components/GiftSection";
@@ -10,19 +10,22 @@ import InvitationWeddingDate from "./components/InvitationWeddingDate";
 import InvitationGalery from "./components/InvitationGalery";
 import InvitationEnd from "./components/InvitationEnd";
 import Navigation from "./components/Navigation";
+import sound from "../src/assets/music/sound.mp3";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
+  const audioRef = useRef(new Audio(sound));
 
   const handleOpen = () => {
     setIsOpen(true);
+
+    const audio = audioRef.current;
+    audio.play().catch((error) => console.error("Audio playback error:", error));
+
     setTimeout(() => {
-      const detailsElement = document.getElementById('details');
+      const detailsElement = document.getElementById("details");
       if (detailsElement) {
-        window.scrollTo({
-          top: detailsElement.offsetTop,
-          behavior: 'smooth',
-        });
+        detailsElement.scrollIntoView({ behavior: "smooth" });
       }
     }, 100);
   };
@@ -35,6 +38,7 @@ function App() {
       style={{ overflowY: isOpen ? "auto" : "hidden" }}
     >
       <InvitationPage onOpen={handleOpen} />
+
       {isOpen && (
         <>
           <div id="details">

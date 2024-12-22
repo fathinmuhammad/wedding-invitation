@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendarCheck } from "@fortawesome/free-solid-svg-icons";
-import bgImage from "../assets/images/bg.png";
+import bgImage from "../assets/images/bg4.png";
 
 const InvitationDetails = () => {
   return (
@@ -16,8 +16,8 @@ const InvitationDetails = () => {
       >
         {/* Dekorasi bunga */}
         <div className="flower-frame-top-left flower-top-left"></div>
-        <div className="flower-frame-top-right flower-top-right"></div>
-        <div className="flower-frame-bottom-left flower-bottom-left"></div>
+        {/* <div className="flower-frame-top-right flower-top-right"></div> */}
+        {/* <div className="flower-frame-bottom-left flower-bottom-left"></div> */}
         <div className="flower-frame-bottom-right flower-bottom-right"></div>
 
         <motion.div className="content">

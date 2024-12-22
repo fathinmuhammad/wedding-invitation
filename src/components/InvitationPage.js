@@ -1,10 +1,39 @@
 import React from "react";
 import "../styles.css";
-import bgImage from "../assets/images/bg.png";
+import bgImage from "../assets/images/bg4.png";
+import FramePage from "../assets/images/Frame3.png";
 
 const InvitationPage = ({ onOpen }) => {
     const params = new URLSearchParams(window.location.search);
     const guestName = params.get("to") || "Tamu Undangan";
+
+    const containerStyle = {
+      width: '220px',
+      height: '220px',
+      borderRadius: '50%',
+      padding: '10px',
+      background: `url(${bgImage})`,
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center',
+      backgroundColor: '#ffffff',
+      margin: '0 auto 1.5rem',
+      position: 'relative',
+      overflow: 'hidden',
+      filter: 'contrast(1.1) brightness(1.05)',
+    };
+  
+    const imageStyle = {
+      position: 'absolute',
+      top: '100%',
+      left: '100%',
+      transform: 'translate(-50%, -50%)',
+      width: '50%',
+      height: '50%',
+      objectFit: 'cover',
+      borderRadius: '50%',
+      border: '3px solid white',
+    };
 
   return (
     <div className="invitation-container" style={{
@@ -23,20 +52,15 @@ const InvitationPage = ({ onOpen }) => {
         maxWidth: '500px',
         width: '90%'
       }}>
-        <div className="image-container">
-          <img
-            src={bgImage}
-            alt="Couple"
-            style={{
-              width: '200px',
-              height: '200px',
-              objectFit: 'cover',
-              borderRadius: '50%',
-              border: '3px solid #B0E0E6',
-              boxShadow: '0 5px 15px rgba(135,206,235,0.3)',
-              marginBottom: '1.5rem'
-            }}
-          />
+        <div className="image-container" style={{ display: 'flex', justifyContent: 'center' }}>
+          <div style={containerStyle}>
+            <img
+              src={FramePage}
+              alt="Couple"
+              aria-label="Image of a couple"
+              style={imageStyle}
+            />
+          </div>
         </div>
         <h2 style={{
           color: '#87CEEB',

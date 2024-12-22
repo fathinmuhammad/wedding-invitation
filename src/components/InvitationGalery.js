@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const images = [
-  { id: 1, src: require("../assets/imagesKita/1.jpeg") },
   { id: 2, src: require("../assets/imagesKita/2.jpeg") },
   { id: 3, src: require("../assets/imagesKita/3.jpeg") },
   { id: 4, src: require("../assets/imagesKita/4.jpeg") },

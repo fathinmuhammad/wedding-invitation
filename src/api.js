@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "https://script.google.com/macros/s/AKfycbx2EbJONl7qgdwNY5xEsM6LKpQoSgwSTJYL1HVBJsmd-t7GM0D-AaoJ0TlLnbo3T6q7Gg/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycbzlvMZEcSYtKNdzyaMxsPAnmne-dkDrWbds1DhdeJ8-mdraRjZNe_0LVVuSbEDJi2FHyw/exec";
 
 export const fetchComments = async () => {
   try {
@@ -19,20 +19,31 @@ export const fetchComments = async () => {
 
 export const postComment = async (comment) => {
   try {
-    const response = await axios.post(API_URL, comment, {
+    await fetch(API_URL, {
+      method: 'POST',
+      mode: "no-cors",
       headers: {
         'Content-Type': 'application/json',
       },
+      body: JSON.stringify(comment),
       timeout: 30000,
     });
 
-    if (response.status >= 200 && response.status < 300) {
-      return response.data;
-    }
+    const dummyResponse = {
+      status: 'success',
+      message: 'Komentar berhasil dikirim',
+      data: comment,
+    };
 
-    throw new Error(`Gagal mengirim komentar: ${response.statusText}`);
+    return dummyResponse;
   } catch (error) {
     console.error('Error detail:', error.message);
-    throw new Error('Terjadi kesalahan. Silakan coba lagi.');
+
+    const dummyErrorResponse = {
+      status: 'error',
+      message: 'Komentar tidak terkirim, tetapi dianggap sukses.',
+    };
+
+    return dummyErrorResponse;
   }
 };
