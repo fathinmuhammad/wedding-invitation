@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Swal from "sweetalert2";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopy } from "@fortawesome/free-solid-svg-icons";
+import bjb from "../assets/images/bjb.png";
 
 const GiftSection = () => {
   return (
@@ -132,7 +133,7 @@ const GiftSection = () => {
                 animate={{ scale: 1 }}
                 transition={{ duration: 0.5 }}
               >
-                  <img src="https://banner2.cleanpng.com/20180611/akr/aa8n6dwf8.webp" className="img-fluid" style={{ maxWidth: '9vh' }} alt="bjb" />
+                  <img src={bjb} className="img-fluid" style={{ maxWidth: '9vh' }} alt="bjb" />
                   <div className="d-flex justify-content-between align-items-center mt-2">
                       <p className="m-0 p-0" style={{ fontSize: '0.95rem' }}>0110-6587-5310-0</p>
                       <button style={{

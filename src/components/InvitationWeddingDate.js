@@ -49,56 +49,220 @@ const InvitationWeddingDate = () => {
       }}>
             <section className="bg-black pb-2" id="wedding-date">
                 <div className="container text-center">
+
+                    <motion.h2
+                    className="font-esthetic py-2 m-0"
+                    style={{ fontSize: '2rem', color: '#4682B4' }}
+                    initial={{ y: 20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 1 }}
+                    >
+                    Allah Subhanahu Wa Ta'ala berfirman
+                    </motion.h2>
+
+                    <motion.div
+                    className="bg-theme-dark mt-4 p-3 shadow rounded-4 mb-10" // Tambahkan margin bottom untuk memberikan jarak
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1 }}
+                    style={{
+                        background: 'rgba(255,255,255,0.95)',
+                        borderRadius: '20px',
+                        border: '1px solid rgba(135,206,235,0.3)',
+                        boxShadow: '0 10px 30px rgba(135,206,235,0.2)'
+                    }}
+                    >
+                        <motion.p
+                        className="p-1 mb-3"
+                        style={{ fontSize: '0.95rem', color: '#778899' }}
+                        initial={{ y: 20, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ duration: 1 }}
+                        >
+                        Dan segala sesuatu Kami ciptakan berpasang-pasangan agar kamu mengingat (kebesaran Allah).
+                        </motion.p>
+                        <motion.a
+                        className="m-0 p-0 text-dark link-offset-2"
+                        target="_blank"
+                        href="https://quran.com/id/51/49"
+                        initial={{ y: 20, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ duration: 1 }}
+                        style={{ color: '#5F9EA0' }}
+                        >
+                        QS. Adh-Dhariyat: 49
+                        </motion.a>
+                    </motion.div>
+
+                    <motion.div
+                    className="bg-theme-dark mt-10 p-3 shadow rounded-4 mb-4" // Tambahkan margin bottom untuk memberikan jarak
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1 }}
+                    style={{
+                        background: 'rgba(255,255,255,0.95)',
+                        borderRadius: '20px',
+                        border: '1px solid rgba(135,206,235,0.3)',
+                        boxShadow: '0 10px 30px rgba(135,206,235,0.2)'
+                    }}
+                    >
+                        <motion.p
+                        className="p-1 mb-3"
+                        style={{ fontSize: '0.95rem', color: '#778899' }}
+                        initial={{ y: 20, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ duration: 1 }}
+                        >
+                        dan sesungguhnya Dialah yang menciptakan pasangan laki-laki dan perempuan,
+                        </motion.p>
+                        <motion.a
+                        className="m-0 p-0 text-dark link-offset-2"
+                        target="_blank"
+                        href="https://quran.com/id/53/45"
+                        initial={{ y: 20, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ duration: 1 }}
+                        style={{ color: '#5F9EA0' }}
+                        >
+                        QS. An-Najm: 45
+                        </motion.a>
+                    </motion.div>
+
                     <motion.h2 className="font-esthetic py-4 m-0" style={{ fontSize: '2.5rem' }} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>Moment Bahagia</motion.h2>
     
-                    <div className="border rounded-pill shadow py-2 px-4 mt-2 mb-4 d-flex justify-content-center">
-                        <div className="d-flex flex-row align-items-center gap-3">
-                            <div className="text-center">
+                    <div
+                        className="border rounded-pill shadow py-2 px-4 mt-2 mb-4"
+                        style={{
+                            display: "grid", // Menggunakan grid
+                            gridTemplateColumns: "repeat(7, auto)", // Membagi kolom untuk angka dan tanda ':'
+                            gap: "0.5rem", // Jarak antar kolom
+                            alignItems: "center", // Posisi vertikal di tengah
+                            justifyItems: "center", // Posisi horizontal di tengah
+                        }}
+                        >
+                        {/* Hari */}
+                        <div className="text-center">
                             <motion.h2
-                                className="m-0"
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 1 }}
+                            className="m-0"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 1 }}
+                            style={{
+                                fontSize: "1.5rem",
+                                fontFamily: "Arial, sans-serif",
+                                color: "#4682B4",
+                                fontWeight: "bold",
+                            }}
                             >
-                                {timeLeft.days}
+                            {timeLeft.days}
                             </motion.h2>
-                            <small>Hari</small>
-                            </div>
-                            <div className="text-center">
-                            <motion.h2
-                                className="m-0"
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 1 }}
+                            <small
+                            style={{
+                                fontSize: "1rem",
+                                fontFamily: "Arial, sans-serif",
+                                color: "#778899",
+                            }}
                             >
-                                {timeLeft.hours}
-                            </motion.h2>
-                            <small>Jam</small>
-                            </div>
-                            <div className="text-center">
-                            <motion.h2
-                                className="m-0"
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 1 }}
-                            >
-                                {timeLeft.minutes}
-                            </motion.h2>
-                            <small>Menit</small>
-                            </div>
-                            <div className="text-center">
-                            <motion.h2
-                                className="m-0"
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 1 }}
-                            >
-                                {timeLeft.seconds}
-                            </motion.h2>
-                            <small>Detik</small>
-                            </div>
+                            Hari
+                            </small>
                         </div>
-                    </div>
+
+                        {/* Separator ':' */}
+                        <span style={{ fontSize: "1.5rem", color: "#4682B4", fontWeight: "bold" }}>
+                            :
+                        </span>
+
+                        {/* Jam */}
+                        <div className="text-center">
+                            <motion.h2
+                            className="m-0"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 1 }}
+                            style={{
+                                fontSize: "1.5rem",
+                                fontFamily: "Arial, sans-serif",
+                                color: "#4682B4",
+                                fontWeight: "bold",
+                            }}
+                            >
+                            {timeLeft.hours}
+                            </motion.h2>
+                            <small
+                            style={{
+                                fontSize: "1rem",
+                                fontFamily: "Arial, sans-serif",
+                                color: "#778899",
+                            }}
+                            >
+                            Jam
+                            </small>
+                        </div>
+
+                        {/* Separator ':' */}
+                        <span style={{ fontSize: "1.5rem", color: "#4682B4", fontWeight: "bold" }}>
+                            :
+                        </span>
+
+                        {/* Menit */}
+                        <div className="text-center">
+                            <motion.h2
+                            className="m-0"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 1 }}
+                            style={{
+                                fontSize: "1.5rem",
+                                fontFamily: "Arial, sans-serif",
+                                color: "#4682B4",
+                                fontWeight: "bold",
+                            }}
+                            >
+                            {timeLeft.minutes}
+                            </motion.h2>
+                            <small
+                            style={{
+                                fontSize: "1rem",
+                                fontFamily: "Arial, sans-serif",
+                                color: "#778899",
+                            }}
+                            >
+                            Menit
+                            </small>
+                        </div>
+
+                        {/* Separator ':' */}
+                        <span style={{ fontSize: "1.5rem", color: "#4682B4", fontWeight: "bold" }}>
+                            :
+                        </span>
+
+                        {/* Detik */}
+                        <div className="text-center">
+                            <motion.h2
+                            className="m-0"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 1 }}
+                            style={{
+                                fontSize: "1.5rem",
+                                fontFamily: "Arial, sans-serif",
+                                color: "#4682B4",
+                                fontWeight: "bold",
+                            }}
+                            >
+                            {timeLeft.seconds}
+                            </motion.h2>
+                            <small
+                            style={{
+                                fontSize: "1rem",
+                                fontFamily: "Arial, sans-serif",
+                                color: "#778899",
+                            }}
+                            >
+                            Detik
+                            </small>
+                        </div>
+                        </div>
 
     
                     <motion.p className="py-2 m-0" style={{ fontSize: '0.95rem' }} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta'ala, insyaAllah kami akan menyelenggarakan acara:</motion.p>

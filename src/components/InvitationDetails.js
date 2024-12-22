@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendarCheck } from "@fortawesome/free-solid-svg-icons";
-import bgImage from "../assets/images/bg4.png";
+import bgImage from "../assets/images/bg.png";
 
 const InvitationDetails = () => {
   return (
@@ -21,8 +21,8 @@ const InvitationDetails = () => {
         <div className="flower-frame-bottom-right flower-bottom-right"></div>
 
         <motion.div className="content">
-          <motion.h1 className="title" whileHover={{ scale: 1.05 }}>
-            Undangan Pernikahan
+          <motion.h1 className="title" whileHover={{ scale: 1.05 }} style={{ fontFamily: 'Playfair Display, serif', fontSize: '2rem' }}>
+            Wedding Invitation
           </motion.h1>
 
           <motion.img
@@ -32,11 +32,11 @@ const InvitationDetails = () => {
             whileHover={{ scale: 1.1 }}
           />
 
-          <motion.h2 className="subtitle" whileHover={{ scale: 1.05 }}>
+          <motion.h2 className="subtitle" whileHover={{ scale: 1.05 }} style={{ fontFamily: 'Playfair Display, serif', fontSize: '2rem' }}>
             Fathin &amp; Fridha
           </motion.h2>
 
-          <motion.p className="wedding-date">
+          <motion.p className="wedding-date" style={{ fontFamily: 'Playfair Display, serif', fontSize: '1.5rem' }}>
             Sabtu, 01 Februari 2025
           </motion.p>
 
@@ -45,7 +45,7 @@ const InvitationDetails = () => {
             target="_blank"
             className="save-date-btn"
           >
-            <button>
+            <button style={{ fontFamily: 'Playfair Display, serif', fontSize: '1.5rem' }}>
               <FontAwesomeIcon icon={faCalendarCheck} className="icon" />{" "}
               <span>Save The Date</span>
             </button>
@@ -69,7 +69,7 @@ const InvitationDetails = () => {
             </div>
           </motion.div>
 
-          <motion.p className="scroll-text">Scroll Down</motion.p>
+          <motion.p className="scroll-text" style={{ fontFamily: 'Playfair Display, serif', fontSize: '1.5rem' }}>Scroll Down</motion.p>
         </motion.div>
       </motion.section>
     </div>

@@ -1,19 +1,19 @@
 import React from "react";
 import { motion } from "framer-motion";
-import cowok from "../assets/images/cowo.png";
-import cewek from "../assets/images/cewe.png";
+import cowok from "../assets/images/cowok.png";
+import cewek from "../assets/images/cewek.png";
 
 const InvitationBridge = () => {
   return (
-    <div className="invitation-bridge" style={{
-        minHeight: '100vh',
-        background: 'linear-gradient(rgba(240,248,255,0.9), rgba(176,216,255,0.9))', // Soft blue gradient
-        fontFamily: "'Playfair Display', serif",
-        padding: '2rem 1rem',
-        position: 'relative',
-        overflow: 'hidden',
-        textAlign: 'center'
-      }}>
+    <div className="invitation-wedding-date" style={{
+      minHeight: '100vh',
+      background: 'linear-gradient(rgba(240,248,255,0.9), rgba(176,216,255,0.9))', // Soft blue gradient
+      fontFamily: "'Playfair Display', serif",
+      padding: '2rem 1rem',
+      position: 'relative',
+      overflow: 'hidden',
+      textAlign: 'center'
+    }}>
         
     <motion.section
       className="text-center px-2 py-5"
@@ -26,7 +26,8 @@ const InvitationBridge = () => {
         minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'center'
+        alignItems: 'center',
+        boxShadow: '0 10px 30px rgba(135,206,235,0.2)' // Tambahkan bayangan untuk efek 3D
       }}
     >
       <motion.div
@@ -42,8 +43,11 @@ const InvitationBridge = () => {
         <motion.h2
           className="font-arabic py-4 m-0"
           style={{ 
-            fontSize: "2rem",
-            color: '#4682B4'
+            fontSize: "1.8rem", // Ukuran font dikurangi
+            color: '#4682B4',
+            fontFamily: "'Cairo', sans-serif", // Font diubah untuk lebih cantik
+            fontWeight: 'bold', // Font dibuat lebih tebal
+            textShadow: '0 1px 2px rgba(0,0,0,0.1)' // Tambahkan bayangan teks untuk efek 3D
           }}
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -55,8 +59,11 @@ const InvitationBridge = () => {
         <motion.h2
           className="font-esthetic py-4 m-0"
           style={{ 
-            fontSize: "2rem",
-            color: '#5F9EA0'
+            fontSize: "1rem", // Ukuran font dikurangi
+            color: '#5F9EA0',
+            fontFamily: "'Cairo', sans-serif", // Font diubah untuk lebih cantik
+            fontWeight: 'bold', // Font dibuat lebih tebal
+            textShadow: '0 1px 2px rgba(0,0,0,0.1)' // Tambahkan bayangan teks untuk efek 3D
           }}
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -68,8 +75,11 @@ const InvitationBridge = () => {
         <motion.p
           className="pb-4 m-0"
           style={{ 
-            fontSize: "0.95rem",
-            color: '#778899'
+            fontSize: "0.7rem", // Ukuran font dikurangi
+            color: '#778899',
+            fontFamily: "'Cairo', sans-serif", // Font diubah untuk lebih cantik
+            fontWeight: 'bold', // Font dibuat lebih tebal
+            textShadow: '0 1px 2px rgba(0,0,0,0.1)' // Tambahkan bayangan teks untuk efek 3D
           }}
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -87,36 +97,51 @@ const InvitationBridge = () => {
             <motion.img
               src={cowok}
               alt="cowo"
-              className="rounded-circle border border-3 shadow my-4 mx-auto"
+              className="rounded-full border border-3 shadow my-4 mx-auto"
               style={{
-                width: '200px',
-                height: '200px',
-                objectFit: 'cover',
-                borderColor: '#B0E0E6'
+                width: "200px",
+                height: "200px",
+                objectFit: "cover",
+                borderColor: "#B0E0E6",
+                boxShadow: '0 5px 15px rgba(135,206,235,0.3)', // Tambahkan bayangan untuk efek 3D
+                borderRadius: '50%' // Pastikan gambar berbentuk lingkaran
               }}
-              whileHover={{ scale: 1.1 }}
+              animate={{
+                scale: [1, 1.1, 1], // Animasi maju mundur
+              }}
+              transition={{
+                repeat: Infinity, // Animasi berulang
+                duration: 1.5,    // Durasi animasi
+                ease: "easeInOut" // Efek halus saat animasi
+              }}
             />
             <motion.h2
               className="font-esthetic m-0"
               style={{ 
-                fontSize: "2.5rem",
-                color: '#4682B4'
+                fontSize: "1rem", // Ukuran font dikurangi
+                color: '#4682B4',
+                fontFamily: "'Cairo', sans-serif", // Font diubah untuk lebih cantik
+                fontWeight: 'bold', // Font dibuat lebih tebal
+                textShadow: '0 1px 2px rgba(0,0,0,0.1)' // Tambahkan bayangan teks untuk efek 3D
               }}
             >
-              Fathin Muhammad Fadhlullah
+              Fathin Muhammad Fadhlullah, S.Kom
             </motion.h2>
             <motion.p
               className="mt-3 mb-1"
               style={{ 
-                fontSize: "1.25rem",
-                color: '#5F9EA0'
+                fontSize: "1rem", // Ukuran font dikurangi
+                color: '#5F9EA0',
+                fontFamily: "'Cairo', sans-serif", // Font diubah untuk lebih cantik
+                fontWeight: 'bold', // Font dibuat lebih tebal
+                textShadow: '0 1px 2px rgba(0,0,0,0.1)' // Tambahkan bayangan teks untuk efek 3D
               }}
             >
-              Putra ke-1
+              Putra pertama
             </motion.p>
             <motion.p 
               className="mb-0"
-              style={{color: '#778899'}}
+              style={{color: '#778899', fontFamily: "'Comic Neue', sans-serif", fontWeight: 'bold', textShadow: '0 1px 2px rgba(0,0,0,0.1)'}}
             >
               Bapak Mohamad Yasin dan Ibu Hikmah Isnaniyah
             </motion.p>
@@ -125,8 +150,11 @@ const InvitationBridge = () => {
           <motion.h2
             className="font-esthetic my-4"
             style={{ 
-              fontSize: "4rem",
-              color: '#4682B4'
+              fontSize: "1rem", // Ukuran font dikurangi
+              color: '#4682B4',
+              fontFamily: "'Cairo', sans-serif", // Font diubah untuk lebih cantik
+              fontWeight: 'bold', // Font dibuat lebih tebal
+              textShadow: '0 1px 2px rgba(0,0,0,0.1)' // Tambahkan bayangan teks untuk efek 3D
             }}
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
@@ -140,39 +168,54 @@ const InvitationBridge = () => {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 1.4 }}
           >
-            <motion.img
+           <motion.img
               src={cewek}
-              alt="cewe"
+              alt="cewek"
               className="rounded-circle border border-3 shadow my-4 mx-auto"
               style={{
-                width: '200px',
-                height: '200px',
-                objectFit: 'cover',
-                borderColor: '#B0E0E6'
+                width: "200px",
+                height: "200px",
+                objectFit: "cover",
+                borderColor: "#B0E0E6",
+                boxShadow: '0 5px 15px rgba(135,206,235,0.3)', // Tambahkan bayangan untuk efek 3D
+                borderRadius: '50%' // Pastikan gambar berbentuk lingkaran
               }}
-              whileHover={{ scale: 1.1 }}
+              animate={{
+                scale: [1, 1.1, 1], // Animasi maju mundur
+              }}
+              transition={{
+                repeat: Infinity, // Animasi berulang
+                duration: 1.5,    // Durasi animasi
+                ease: "easeInOut" // Efek halus saat animasi
+              }}
             />
             <motion.h2
               className="font-esthetic m-0"
               style={{ 
-                fontSize: "2.5rem",
-                color: '#4682B4'
+                fontSize: "1rem", // Ukuran font dikurangi
+                color: '#4682B4',
+                fontFamily: "'Cairo', sans-serif", // Font diubah untuk lebih cantik
+                fontWeight: 'bold', // Font dibuat lebih tebal
+                textShadow: '0 1px 2px rgba(0,0,0,0.1)' // Tambahkan bayangan teks untuk efek 3D
               }}
             >
-              Anisa Hafridha Putri
+              Anisa Hafridha Putri, Amd.Kes
             </motion.h2>
             <motion.p
               className="mt-3 mb-1"
               style={{ 
-                fontSize: "1.25rem",
-                color: '#5F9EA0'
+                fontSize: "1rem", // Ukuran font dikurangi
+                color: '#5F9EA0',
+                fontFamily: "'Cairo', sans-serif", // Font diubah untuk lebih cantik
+                fontWeight: 'bold', // Font dibuat lebih tebal
+                textShadow: '0 1px 2px rgba(0,0,0,0.1)' // Tambahkan bayangan teks untuk efek 3D
               }}
             >
-              Putri ke-1
+              Putri pertama
             </motion.p>
             <motion.p 
               className="mb-0"
-              style={{color: '#778899'}}
+              style={{color: '#778899', fontFamily: "'Comic Neue', sans-serif", fontWeight: 'bold', textShadow: '0 1px 2px rgba(0,0,0,0.1)'}}
             >
               Bapak Agus Muhayar dan Ibu Husada Prawati
             </motion.p>
