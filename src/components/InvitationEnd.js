@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import bgImage from "../assets/images/bg.png";
+import bgImage from "../assets/images/bg2.png";
 
 const InvitationEnd = () => {
   return (
@@ -25,7 +25,7 @@ const InvitationEnd = () => {
 
                 <motion.h2 
                 className="font-esthetic" 
-                style={{ fontSize: "2rem" }}
+                style={{ fontSize: "1rem", fontFamily: "'Poppins', sans-serif", color: '#4682B4' }}
                 initial={{ x: "-100vw" }}
                 animate={{ x: 0 }}
                 transition={{ duration: 0.7 }}
@@ -34,7 +34,7 @@ const InvitationEnd = () => {
                 </motion.h2>
                 <motion.h2 
                 className="font-arabic pt-4" 
-                style={{ fontSize: "2rem" }}
+                style={{ fontSize: "1.35rem", color: '#4682B4', fontFamily: "'Cairo', sans-serif", }}
                 initial={{ x: "-100vw" }}
                 animate={{ x: 0 }}
                 transition={{ duration: 0.7 }}
@@ -45,16 +45,21 @@ const InvitationEnd = () => {
                 <motion.img
                 src={bgImage}
                 alt="Fathin & Fridha"
-                className="rounded-circle border border-3 border-light shadow my-4"
                 style={{
-                    width: '200px',
-                    height: '200px',
+                    width: '350px',
+                    height: '350px',
                     objectFit: 'cover',
                     borderRadius: '50%',
-                    border: '3px solid #B0E0E6',
-                    boxShadow: '0 5px 15px rgba(135,206,235,0.3)'
                 }}
                 whileHover={{ scale: 1.1 }}
+                animate={{
+                  scale: [1, 1.1, 1], // Animasi maju mundur
+                }}
+                transition={{
+                  repeat: Infinity, // Animasi berulang
+                  duration: 1.5,    // Durasi animasi
+                  ease: "easeInOut" // Efek halus saat animasi
+                }}
             />
                
             </div>

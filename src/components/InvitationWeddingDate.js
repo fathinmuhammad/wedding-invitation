@@ -52,7 +52,7 @@ const InvitationWeddingDate = () => {
 
                     <motion.h2
                     className="font-esthetic py-2 m-0"
-                    style={{ fontSize: '2rem', color: '#4682B4' }}
+                    style={{ fontSize: '1.5rem', fontFamily: "'Poppins', sans-serif", color: '#4682B4' }}
                     initial={{ y: 20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 1 }}
@@ -93,7 +93,7 @@ const InvitationWeddingDate = () => {
                         QS. Adh-Dhariyat: 49
                         </motion.a>
                     </motion.div>
-
+                    <br/>
                     <motion.div
                     className="bg-theme-dark mt-10 p-3 shadow rounded-4 mb-4" // Tambahkan margin bottom untuk memberikan jarak
                     initial={{ opacity: 0 }}
@@ -128,7 +128,7 @@ const InvitationWeddingDate = () => {
                         </motion.a>
                     </motion.div>
 
-                    <motion.h2 className="font-esthetic py-4 m-0" style={{ fontSize: '2.5rem' }} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>Moment Bahagia</motion.h2>
+                    <motion.h2 className="font-esthetic py-4 m-0" style={{ fontSize: '2rem', color: '#4682B4', fontFamily: "'Poppins', sans-serif" }} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>Moment Bahagia</motion.h2>
     
                     <div
                         className="border rounded-pill shadow py-2 px-4 mt-2 mb-4"
@@ -265,18 +265,18 @@ const InvitationWeddingDate = () => {
                         </div>
 
     
-                    <motion.p className="py-2 m-0" style={{ fontSize: '0.95rem' }} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta'ala, insyaAllah kami akan menyelenggarakan acara:</motion.p>
+                    <motion.p className="py-2 m-0" style={{ fontSize: '0.95rem', fontFamily: "'Poppins', sans-serif" }} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta'ala, insyaAllah kami akan menyelenggarakan acara:</motion.p>
     
     
                     <div className="overflow-x-hidden">
                         <div className="py-2" data-aos="fade-right" data-aos-duration="1500">
-                            <motion.h2 className="font-esthetic m-0 py-2" style={{ fontSize: '2rem' }} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>Akad</motion.h2>
-                            <p style={{ fontSize: '0.95rem' }}>Pukul 09.00 WIB - Selesai</p>
+                            <motion.h2 className="font-esthetic m-0 py-2" style={{ fontSize: '2rem', color: '#4682B4', fontFamily: "'Poppins', sans-serif" }} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>Akad</motion.h2>
+                            <p style={{ fontSize: '0.95rem', fontFamily: "'Poppins', sans-serif" }}>Pukul 09.00 WIB - Selesai</p>
                         </div>
     
                         <div className="py-2" data-aos="fade-left" data-aos-duration="1500">
-                            <motion.h2 className="font-esthetic m-0 py-2" style={{ fontSize: '2rem' }} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>Resepsi</motion.h2>
-                            <p style={{ fontSize: '0.95rem' }}>Pukul 11.00 WIB - Selesai</p>
+                            <motion.h2 className="font-esthetic m-0 py-2" style={{ fontSize: '2rem', color: '#4682B4', fontFamily: "'Poppins', sans-serif" }} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>Resepsi</motion.h2>
+                            <p style={{ fontSize: '0.95rem', fontFamily: "'Poppins', sans-serif" }}>Pukul 11.00 WIB - Selesai</p>
                         </div>
                     </div>
     
@@ -296,9 +296,9 @@ const InvitationWeddingDate = () => {
                             }}> <FontAwesomeIcon icon={faMapLocationDot} className="me-2" /> Lihat Google Maps</button>
                         </a>                        
                     </div>
-
+                    <br/>
                     <div className="py-2">
-                        <small className="d-block my-1">Gg. H. Togog 2, Kel. Pondok Aren, Kec. Pondok Aren, Kota Tangerang Selatan, Banten 15224</small>
+                        <small className="d-block my-1" style={{fontSize: '0.95rem',fontFamily: "'Poppins', sans-serif"}}>Gg. H. Togog 2, Kel. Pondok Aren, Kec. Pondok Aren, Kota Tangerang Selatan, Banten 15224</small>
                     </div>
                 </div>
             </section>

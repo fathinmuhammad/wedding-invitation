@@ -1,23 +1,23 @@
   /* General styling for the header */
-  .header {
+  /* .header {
     text-align: center;
     margin: 20px 0;
     font-family: "Arial", sans-serif;
     color: #2c3e50;
-  }
+  } */
   
   /* Styling for the header title */
-  .header h1 {
+  /* .header h1 {
     font-size: 3rem;
     color: #3498db;
     text-shadow: 2px 2px 4px rgba(52, 152, 219, 0.2);
-  }
+  } */
   
   /* Styling for the header paragraph */
-  .header p {
+  /* .header p {
     font-size: 1.2rem;
     color: #34495e;
-  }
+  } */
 
   /* Styling for the gift section */
   .gift-section {
@@ -337,26 +337,29 @@
   /* Styling for the invitation title */
   .invitation-title {
     color: #87ceeb;
-    font-size: 1.2rem;
+    font-size: 2rem;
     margin-bottom: 0.5rem;
     font-family: "Royal Wedding", sans-serif;
   }
   
   /* Styling for the invitation couple */
-  .invitation-couple {
-    color: #4682b4;
-    font-size: 24px;
-    margin-bottom: 1.5rem;
-    font-family: "Elsie", sans-serif;
+  .invitation-couple { 
+    color: #11212e;
+    font-size: 40px;
+    margin-bottom: 2rem;
+    font-family: 'Great Vibes', cursive;;
     font-weight: bold;
+    text-align: center;
+    line-height: 1.6;
   }
   
   /* Styling for the invitation text */
   .invitation-text {
-    color: #5f9ea0;
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-    font-family: "Playfair Display", serif;
+    font-size: 1.2rem;
+    color: #778899;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   }
   
   /* Styling for the guest name */
@@ -436,28 +439,28 @@
 }
 
 /* Judul */
-.invitation-title {
+/* .invitation-title {
   color: #87ceeb;
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
   font-family: "Royal Wedding", sans-serif;
-}
+} */
 
-.invitation-couple {
+/* .invitation-couple {
   color: #4682b4;
   font-size: 24px;
   margin-bottom: 1.5rem;
   font-family: "Elsie", sans-serif;
   font-weight: bold;
-}
+} */
 
 /* Teks Undangan */
-.invitation-text {
+/* .invitation-text {
   color: #5f9ea0;
   font-size: 1rem;
   margin-bottom: 0.5rem;
   font-family: "Playfair Display", serif;
-}
+} */
 
 /* Nama Tamu */
 .guest-name {
@@ -589,9 +592,9 @@
   width: 200px;
   height: 200px;
   object-fit: cover;
-  border-radius: 50%;
+  /* border-radius: 50%;
   border: 3px solid #fff;
-  box-shadow: 0 5px 15px rgba(135, 206, 235, 0.3);
+  box-shadow: 0 5px 15px rgba(135, 206, 235, 0.3); */
   margin: 1.5rem 0;
 }
 
@@ -673,13 +676,13 @@
 }
 
 /* Paragraph Styles */
-.invitation-text {
+/* .invitation-text {
   font-size: 1.5rem;
   color: #778899;
   font-family: 'Cairo', sans-serif;
   font-weight: bold;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-}
+} */
 
 /* Image Styles */
 .invitation-image {

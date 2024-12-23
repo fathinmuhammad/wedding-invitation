@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import "../styles.css";
-import bgImage from "../assets/images/bg.png";
+import bgImage from "../assets/images/bg2.png";
 
 const InvitationPage = ({ onOpen }) => {
   const params = new URLSearchParams(window.location.search);
@@ -20,10 +19,42 @@ const InvitationPage = ({ onOpen }) => {
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <div className="image-container">
-          <img src={bgImage} alt="Couple" aria-label="Image of a couple" />
-        </div>
-        <h2 className="invitation-title">The Wedding of</h2>
+        <motion.img 
+              src={bgImage} 
+              alt="Couple" 
+              className="profile-img" 
+              initial={{ scale: 0 }} 
+              animate={{
+                scale: [1, 1.1, 1], // Animasi maju mundur
+              }}
+              transition={{
+                repeat: Infinity, // Animasi berulang
+                duration: 1.5,    // Durasi animasi
+                ease: "easeInOut" // Efek halus saat animasi
+              }}
+          />
+        {/* <motion.div
+          className="image-container"
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 1 }}
+        >
+          <motion.img 
+              src={bgImage} 
+              alt="Couple" 
+              className="profile-img" 
+              initial={{ scale: 0 }} 
+              animate={{
+                scale: [1, 1.1, 1], // Animasi maju mundur
+              }}
+              transition={{
+                repeat: Infinity, // Animasi berulang
+                duration: 1.5,    // Durasi animasi
+                ease: "easeInOut" // Efek halus saat animasi
+              }}
+          />
+        </motion.div> */}
+        <h2 className="invitation-title">THE WEDDING OF</h2>
         <h1 className="invitation-couple">Fathin & Fridha</h1>
         <p className="invitation-text">Kepada Bapak/Ibu/Saudara/i</p>
         <strong className="guest-name">{guestName}</strong>

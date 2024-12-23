@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import cowok from "../assets/images/cowok.png";
-import cewek from "../assets/images/cewek.png";
+import cowok from "../assets/images/cowok2.png";
+import cewek from "../assets/images/cewek2.png";
 
 const InvitationBridge = () => {
   return (
@@ -48,7 +48,7 @@ const InvitationBridge = () => {
         <motion.h2
           className="font-arabic py-4 m-0"
           style={{ 
-            fontSize: "1.8rem", // Ukuran font dikurangi
+            fontSize: "1.35rem", // Ukuran font dikurangi
             color: '#4682B4',
             fontFamily: "'Cairo', sans-serif", // Font diubah untuk lebih cantik
             fontWeight: 'bold', // Font dibuat lebih tebal
@@ -67,7 +67,7 @@ const InvitationBridge = () => {
           style={{ 
             fontSize: "1rem", // Ukuran font dikurangi
             color: '#5F9EA0',
-            fontFamily: "'Cairo', sans-serif", // Font diubah untuk lebih cantik
+            fontFamily: "'Poppins', sans-serif", // Font diubah untuk lebih cantik
             fontWeight: 'bold', // Font dibuat lebih tebal
             textShadow: '0 1px 2px rgba(0,0,0,0.1)', // Tambahkan bayangan teks untuk efek 3D
             textAlign: 'center' // Pastikan teks ditengah
@@ -82,9 +82,9 @@ const InvitationBridge = () => {
         <motion.p
           className="pb-4 m-0"
           style={{ 
-            fontSize: "0.7rem", // Ukuran font dikurangi
+            fontSize: "1rem", // Ukuran font diperbesar
             color: '#778899',
-            fontFamily: "'Cairo', sans-serif", // Font diubah untuk lebih cantik
+            fontFamily: "'Poppins', sans-serif", // Font diubah untuk lebih cantik
             fontWeight: 'bold', // Font dibuat lebih tebal
             textShadow: '0 1px 2px rgba(0,0,0,0.1)', // Tambahkan bayangan teks untuk efek 3D
             textAlign: 'center' // Pastikan teks ditengah
@@ -105,16 +105,13 @@ const InvitationBridge = () => {
             <motion.img
               src={cowok}
               alt="cowo"
-              className="rounded-full border border-3 shadow my-4 mx-auto"
               style={{
                 width: "200px",
                 height: "200px",
                 objectFit: "cover",
-                borderColor: "#B0E0E6",
-                border: "2px solid #87ceeb",
-                boxShadow: '0 5px 15px rgba(135,206,235,0.3)', // Tambahkan bayangan untuk efek 3D
-                borderRadius: '50%', // Pastikan gambar berbentuk lingkaran
-                margin: '20px 0' // Tambahkan margin untuk meningkatkan jarak dengan elemen lain
+                border: "3px solid #fff",
+                margin: '20px 0', // Tambahkan margin untuk meningkatkan jarak dengan elemen lain
+                filter: 'saturate(0%)', // Ubah warna foto menjadi abu-abu
               }}
               animate={{
                 scale: [1, 1.1, 1], // Animasi maju mundur
@@ -126,11 +123,11 @@ const InvitationBridge = () => {
               }}
             />
             <motion.h2
-              className="font-esthetic m-0"
+              className="m-0"
               style={{ 
-                fontSize: "1rem", // Ukuran font dikurangi
-                color: '#4682B4',
-                fontFamily: "'Cairo', sans-serif", // Font diubah untuk lebih cantik
+                fontSize: "0.95rem", // Ukuran font dikurangi
+                color: '#11212e',
+                fontFamily: "'Great Vibes', cursive", // Font diubah untuk lebih cantik
                 fontWeight: 'bold', // Font dibuat lebih tebal
                 textShadow: '0 1px 2px rgba(0,0,0,0.1)', // Tambahkan bayangan teks untuk efek 3D
                 textAlign: 'center' // Pastikan teks ditengah
@@ -143,7 +140,7 @@ const InvitationBridge = () => {
               style={{ 
                 fontSize: "1rem", // Ukuran font dikurangi
                 color: '#5F9EA0',
-                fontFamily: "'Cairo', sans-serif", // Font diubah untuk lebih cantik
+                fontFamily: "'Poppins', sans-serif", // Font diubah untuk lebih cantik
                 fontWeight: 'bold', // Font dibuat lebih tebal
                 textShadow: '0 1px 2px rgba(0,0,0,0.1)', // Tambahkan bayangan teks untuk efek 3D
                 textAlign: 'center' // Pastikan teks ditengah
@@ -164,7 +161,7 @@ const InvitationBridge = () => {
             style={{ 
               fontSize: "1rem", // Ukuran font dikurangi
               color: '#4682B4',
-              fontFamily: "'Cairo', sans-serif", // Font diubah untuk lebih cantik
+              fontFamily: "'Poppins', sans-serif", // Font diubah untuk lebih cantik
               fontWeight: 'bold', // Font dibuat lebih tebal
               textShadow: '0 1px 2px rgba(0,0,0,0.1)', // Tambahkan bayangan teks untuk efek 3D
               textAlign: 'center' // Pastikan teks ditengah
@@ -189,10 +186,9 @@ const InvitationBridge = () => {
                 width: "200px",
                 height: "200px",
                 objectFit: "cover",
-                borderColor: "#B0E0E6",
-                boxShadow: '0 5px 15px rgba(135,206,235,0.3)', // Tambahkan bayangan untuk efek 3D
-                borderRadius: '50%', // Pastikan gambar berbentuk lingkaran
-                margin: '20px 0' // Tambahkan margin untuk meningkatkan jarak dengan elemen lain
+                border: "3px solid #fff",
+                margin: '20px 0',
+                filter: 'saturate(0%)',
               }}
               animate={{
                 scale: [1, 1.1, 1], // Animasi maju mundur
@@ -206,9 +202,9 @@ const InvitationBridge = () => {
             <motion.h2
               className="font-esthetic m-0"
               style={{ 
-                fontSize: "1rem", // Ukuran font dikurangi
-                color: '#4682B4',
-                fontFamily: "'Cairo', sans-serif", // Font diubah untuk lebih cantik
+                fontSize: "0.95rem", // Ukuran font dikurangi
+                color: '#11212e',
+                fontFamily: "'Great Vibes', cursive", // Font diubah untuk lebih cantik
                 fontWeight: 'bold', // Font dibuat lebih tebal
                 textShadow: '0 1px 2px rgba(0,0,0,0.1)', // Tambahkan bayangan teks untuk efek 3D
                 textAlign: 'center' // Pastikan teks ditengah
@@ -221,7 +217,7 @@ const InvitationBridge = () => {
               style={{ 
                 fontSize: "1rem", // Ukuran font dikurangi
                 color: '#5F9EA0',
-                fontFamily: "'Cairo', sans-serif", // Font diubah untuk lebih cantik
+                fontFamily: "'Poppins', sans-serif", // Font diubah untuk lebih cantik
                 fontWeight: 'bold', // Font dibuat lebih tebal
                 textShadow: '0 1px 2px rgba(0,0,0,0.1)', // Tambahkan bayangan teks untuk efek 3D
                 textAlign: 'center' // Pastikan teks ditengah

@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { postComment, fetchComments } from "../api"; // Pastikan API diimport dengan benar
 import Swal from "sweetalert2";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPersonCircleQuestion } from "@fortawesome/free-solid-svg-icons";
 
 const CommentForm = () => {
   const [name, setName] = useState("");
@@ -96,108 +98,155 @@ const CommentForm = () => {
         transition={{ duration: 0.7 }}
         className="comment-form"
         onSubmit={handleSubmit}
-        style={{ maxWidth: "90%", margin: "auto", padding: "2rem 1rem" }}
+        style={{
+          maxWidth: "100%",
+          margin: "2rem auto",
+          padding: "2rem",
+          background: "#ffffff",
+          borderRadius: "12px",
+          boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
+        }}
       >
         <h2
           className="font-esthetic text-center mt-2 mb-4"
-          style={{ fontSize: "2.5rem" }}
+          style={{
+            fontSize: "2.5rem",
+            color: "#4682B4",
+            fontFamily: "'Poppins', sans-serif",
+            letterSpacing: "0.5px",
+            fontWeight: "600",
+          }}
         >
           Ucapan &amp; Doa
         </h2>
 
         {/* Input Nama */}
-        <div className="mb-3" style={{ maxWidth: '100%' }}>
-          <label htmlFor="form-name" className="form-label">
-            <i className="fa-solid fa-person me-1"></i>Nama
+        <div className="mb-4">
+          <label
+            htmlFor="form-name"
+            className="form-label"
+            style={{
+              fontSize: "1rem",
+              fontFamily: "'Poppins', sans-serif",
+              color: "#6c757d",
+              fontWeight: "500",
+            }}
+          >
+            <i className="fa-solid fa-person me-2"></i> Nama
           </label>
           <input
             type="text"
-            className="form-control shadow-sm rounded-4"
+            className="form-control shadow-sm"
             id="form-name"
             placeholder="Isikan Nama Anda"
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
-            style={{ maxWidth: '90%' }}
+            style={{
+              fontSize: "1rem",
+              padding: "0.75rem",
+              border: "1px solid #ddd",
+              borderRadius: "10px",
+              backgroundColor: "#f9f9f9",
+              maxWidth: "90%",
+            }}
           />
         </div>
 
         {/* Dropdown Presensi */}
         <motion.div
-        className="mb-3"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        style={{
-            maxWidth: "100%",
-            margin: "0 auto",
-            textAlign: "left",
-        }}
+          className="mb-4"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
         >
-            <label
-                htmlFor="form-presence"
-                className="form-label"
-                style={{
-                fontSize: "1.1rem",
-                fontWeight: "bold",
-                color: "#555",
-                display: "block",
-                marginBottom: "0.5rem",
-                }}
-            >
-                <i
-                className="fa-solid fa-person-circle-question me-1"
-                style={{ color: "#87CEEB" }}
-                ></i>
-                Presensi
-            </label>
-            <select
-                className="form-select shadow-sm rounded-4"
-                id="form-presence"
-                value={attendance}
-                onChange={(e) => setAttendance(e.target.value)}
-                required
-                style={{
-                fontSize: "1rem",
-                padding: "0.75rem",
-                border: "1px solid #ddd",
-                borderRadius: "12px",
-                backgroundColor: "#f9f9f9",
-                transition: "box-shadow 0.3s ease",
-                outline: "none",
-                }}
-                onFocus={(e) => (e.target.style.boxShadow = "0 0 10px rgba(135, 206, 250, 0.6)")}
-                onBlur={(e) => (e.target.style.boxShadow = "none")}
-            >
-                <option value="" disabled hidden>
-                Konfirmasi Presensi
-                </option>
-                <option value="Datang">Datang</option>
-                <option value="Berhalangan">Berhalangan</option>
-            </select>
+          <label
+            htmlFor="form-presence"
+            className="form-label mb-2" // Tambahkan margin bottom untuk jarak spasi
+            style={{
+              fontSize: "1rem",
+              fontFamily: "'Poppins', sans-serif",
+              color: "#6c757d",
+              fontWeight: "500",
+              marginRight: "1.2rem"
+            }}
+          >
+            <FontAwesomeIcon icon={faPersonCircleQuestion} className="icon" style={{marginRight: "1.2rem"}} />
+            Presensi  
+          </label>
+          <select
+            className="form-select shadow-sm"
+            id="form-presence"
+            value={attendance}
+            onChange={(e) => setAttendance(e.target.value)}
+            required
+            style={{
+              fontSize: "1rem",
+              padding: "0.75rem",
+              border: "1px solid #ddd",
+              borderRadius: "10px",
+              backgroundColor: "#f9f9f9",
+              fontFamily: "'Poppins', sans-serif",
+            }}
+          >
+            <option value="" disabled hidden>
+              Konfirmasi Presensi
+            </option>
+            <option value="Datang">Datang</option>
+            <option value="Berhalangan">Berhalangan</option>
+          </select>
         </motion.div>
 
-
         {/* Textarea Ucapan */}
-        <div className="mb-3" style={{ maxWidth: '100%' }}>
-          <label htmlFor="form-comment" className="form-label">
-            <i className="fa-solid fa-comment me-1"></i>Ucapan &amp; Doa
+        <div className="mb-4">
+          <label
+            htmlFor="form-comment"
+            className="form-label"
+            style={{
+              fontSize: "1rem",
+              fontFamily: "'Poppins', sans-serif",
+              color: "#6c757d",
+              fontWeight: "500",
+            }}
+          >
+            <i className="fa-solid fa-comment me-2"></i> Ucapan &amp; Doa
           </label>
           <textarea
-            className="form-control shadow-sm rounded-4"
+            className="form-control shadow-sm"
             id="form-comment"
             rows="4"
             placeholder="Tulis Ucapan dan Doa"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             required
-            style={{ maxWidth: '90%' }}
+            style={{
+              fontSize: "1rem",
+              padding: "0.75rem",
+              border: "1px solid #ddd",
+              borderRadius: "10px",
+              backgroundColor: "#f9f9f9",
+              maxWidth: "90%",
+            }}
           ></textarea>
         </div>
 
         {/* Submit Button */}
         <div className="d-grid">
-          <button type="submit" className="btn btn-primary">
+          <button
+            type="submit"
+            className="btn btn-primary shadow-sm"
+            style={{
+              fontSize: "1rem",
+              padding: "0.75rem",
+              backgroundColor: "#4682B4",
+              border: "none",
+              borderRadius: "10px",
+              color: "#ffffff",
+              transition: "background-color 0.3s ease",
+            }}
+            onMouseOver={(e) => (e.target.style.backgroundColor = "#36648b")}
+            onMouseOut={(e) => (e.target.style.backgroundColor = "#4682B4")}
+          >
             Submit
           </button>
         </div>

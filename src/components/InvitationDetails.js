@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendarCheck } from "@fortawesome/free-solid-svg-icons";
-import bgImage from "../assets/images/bg.png";
+import bgImage from "../assets/images/bg2.png";
 
 const InvitationDetails = () => {
   return (
@@ -27,9 +27,17 @@ const InvitationDetails = () => {
             alt="Fathin & Fridha"
             className="profile-img"
             whileHover={{ scale: 1.1 }}
+            animate={{
+              scale: [1, 1.1, 1], // Animasi maju mundur
+            }}
+            transition={{
+              repeat: Infinity, // Animasi berulang
+              duration: 1.5,    // Durasi animasi
+              ease: "easeInOut" // Efek halus saat animasi
+            }}
           />
 
-          <motion.h2 className="subtitle" whileHover={{ scale: 1.05 }}>
+          <motion.h2 className="invitation-couple" whileHover={{ scale: 1.05 }}>
             Fathin &amp; Fridha
           </motion.h2>
 

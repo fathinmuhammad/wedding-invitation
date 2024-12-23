@@ -25,14 +25,14 @@ const GiftSection = () => {
           <div className="container text-center">
               <motion.h2 
                 className="font-esthetic pt-2 mb-4" 
-                style={{ fontSize: '2.5rem' }}
+                style={{ fontSize: '2.5rem', fontFamily: "'Poppins', sans-serif" }}
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ duration: 0.5 }}
               >Love Gift</motion.h2>
               <motion.p 
                 className="mb-3" 
-                style={{ fontSize: '0.95rem' }}
+                style={{ fontSize: '0.95rem', fontFamily: "'Poppins', sans-serif" }}
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8 }}
@@ -52,7 +52,7 @@ const GiftSection = () => {
                   alt="bca" 
                 />
                 <div className="d-flex justify-content-between align-items-center mt-2">
-                  <p className="m-0 p-0" style={{ fontSize: '0.95rem' }}>7295-0795-50</p>
+                  <p className="m-0 p-0" style={{ fontSize: '0.95rem', fontFamily: "'Poppins', sans-serif" }}>7295-0795-50</p>
                   <button style={{
                     background: '#87CEEB',
                     color: 'white',
@@ -81,7 +81,7 @@ const GiftSection = () => {
                   </button>
                 </div>
 
-                <p className="mt-2 mb-0 p-0" style={{ fontSize: '0.95rem' }}>A/N Fathin Muhammad Fadhlullah</p>
+                <p className="mt-2 mb-0 p-0" style={{ fontSize: '0.95rem', fontFamily: "'Poppins', sans-serif" }}>A/N Fathin Muhammad Fadhlullah</p>
               </motion.div>
 
 
@@ -94,7 +94,7 @@ const GiftSection = () => {
               >
                   <img src="https://upload.wikimedia.org/wikipedia/id/thumb/5/55/BNI_logo.svg/1024px-BNI_logo.svg.png" className="img-fluid" style={{ maxWidth: '9vh' }} alt="bni" />
                   <div className="d-flex justify-content-between align-items-center mt-2">
-                      <p className="m-0 p-0" style={{ fontSize: '0.95rem' }}>1826-2928-16</p>
+                      <p className="m-0 p-0" style={{ fontSize: '0.95rem', fontFamily: "'Poppins', sans-serif" }}>1826-2928-16</p>
                       <button style={{
                         background: '#87CEEB',
                         color: 'white',
@@ -123,7 +123,7 @@ const GiftSection = () => {
                       </button>
                   </div>
 
-                  <p className="mt-2 mb-0 p-0" style={{ fontSize: '0.95rem' }}>A/N Anisa Hafridha Putri</p>
+                  <p className="mt-2 mb-0 p-0" style={{ fontSize: '0.95rem', fontFamily: "'Poppins', sans-serif" }}>A/N Anisa Hafridha Putri</p>
               </motion.div>
 
               <motion.div 
@@ -135,7 +135,7 @@ const GiftSection = () => {
               >
                   <img src={bjb} className="img-fluid" style={{ maxWidth: '9vh' }} alt="bjb" />
                   <div className="d-flex justify-content-between align-items-center mt-2">
-                      <p className="m-0 p-0" style={{ fontSize: '0.95rem' }}>0110-6587-5310-0</p>
+                      <p className="m-0 p-0" style={{ fontSize: '0.95rem', fontFamily: "'Poppins', sans-serif" }}>0110-6587-5310-0</p>
                       <button style={{
                         background: '#87CEEB',
                         color: 'white',
@@ -164,7 +164,7 @@ const GiftSection = () => {
                       </button>
                   </div>
 
-                  <p className="mt-2 mb-0 p-0" style={{ fontSize: '0.95rem' }}>A/N Anisa Hafridha Putri</p>
+                  <p className="mt-2 mb-0 p-0" style={{ fontSize: '0.95rem', fontFamily: "'Poppins', sans-serif" }}>A/N Anisa Hafridha Putri</p>
               </motion.div>
           </div>
       </motion.section>

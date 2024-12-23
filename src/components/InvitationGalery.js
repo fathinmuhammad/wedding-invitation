@@ -7,9 +7,6 @@ const images = [
   { id: 4, src: require("../assets/imagesKita/4.jpeg") },
   { id: 5, src: require("../assets/imagesKita/5.jpeg") },
   { id: 6, src: require("../assets/imagesKita/6.jpeg") },
-  { id: 7, src: require("../assets/imagesKita/7.jpeg") },
-  { id: 8, src: require("../assets/imagesKita/8.jpeg") },
-  { id: 9, src: require("../assets/imagesKita/9.jpeg") },
 ];
 
 const InvitationGallery = () => {
