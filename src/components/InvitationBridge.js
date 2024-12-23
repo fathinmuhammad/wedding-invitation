@@ -12,7 +12,9 @@ const InvitationBridge = () => {
       padding: '2rem 1rem',
       position: 'relative',
       overflow: 'hidden',
-      textAlign: 'center'
+      textAlign: 'center',
+      color: '#333', // Tambahkan warna teks untuk meningkatkan kontras
+      boxShadow: '0 10px 30px rgba(135,206,235,0.2)' // Tambahkan bayangan untuk efek 3D
     }}>
         
     <motion.section
@@ -27,7 +29,9 @@ const InvitationBridge = () => {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        boxShadow: '0 10px 30px rgba(135,206,235,0.2)' // Tambahkan bayangan untuk efek 3D
+        boxShadow: '0 10px 30px rgba(135,206,235,0.2)', // Tambahkan bayangan untuk efek 3D
+        borderRadius: '10px', // Tambahkan sudut bulat untuk meningkatkan estetika
+        margin: '20px 0' // Tambahkan margin untuk meningkatkan jarak dengan elemen lain
       }}
     >
       <motion.div
@@ -37,7 +41,8 @@ const InvitationBridge = () => {
           background: 'rgba(255,255,255,0.95)',
           borderRadius: '20px',
           border: '1px solid rgba(135,206,235,0.3)',
-          boxShadow: '0 10px 30px rgba(135,206,235,0.2)'
+          boxShadow: '0 10px 30px rgba(135,206,235,0.2)',
+          margin: '20px 0' // Tambahkan margin untuk meningkatkan jarak dengan elemen lain
         }}
       >
         <motion.h2
@@ -47,7 +52,8 @@ const InvitationBridge = () => {
             color: '#4682B4',
             fontFamily: "'Cairo', sans-serif", // Font diubah untuk lebih cantik
             fontWeight: 'bold', // Font dibuat lebih tebal
-            textShadow: '0 1px 2px rgba(0,0,0,0.1)' // Tambahkan bayangan teks untuk efek 3D
+            textShadow: '0 1px 2px rgba(0,0,0,0.1)', // Tambahkan bayangan teks untuk efek 3D
+            textAlign: 'center' // Pastikan teks ditengah
           }}
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -63,7 +69,8 @@ const InvitationBridge = () => {
             color: '#5F9EA0',
             fontFamily: "'Cairo', sans-serif", // Font diubah untuk lebih cantik
             fontWeight: 'bold', // Font dibuat lebih tebal
-            textShadow: '0 1px 2px rgba(0,0,0,0.1)' // Tambahkan bayangan teks untuk efek 3D
+            textShadow: '0 1px 2px rgba(0,0,0,0.1)', // Tambahkan bayangan teks untuk efek 3D
+            textAlign: 'center' // Pastikan teks ditengah
           }}
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -79,7 +86,8 @@ const InvitationBridge = () => {
             color: '#778899',
             fontFamily: "'Cairo', sans-serif", // Font diubah untuk lebih cantik
             fontWeight: 'bold', // Font dibuat lebih tebal
-            textShadow: '0 1px 2px rgba(0,0,0,0.1)' // Tambahkan bayangan teks untuk efek 3D
+            textShadow: '0 1px 2px rgba(0,0,0,0.1)', // Tambahkan bayangan teks untuk efek 3D
+            textAlign: 'center' // Pastikan teks ditengah
           }}
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -103,8 +111,10 @@ const InvitationBridge = () => {
                 height: "200px",
                 objectFit: "cover",
                 borderColor: "#B0E0E6",
+                border: "2px solid #87ceeb",
                 boxShadow: '0 5px 15px rgba(135,206,235,0.3)', // Tambahkan bayangan untuk efek 3D
-                borderRadius: '50%' // Pastikan gambar berbentuk lingkaran
+                borderRadius: '50%', // Pastikan gambar berbentuk lingkaran
+                margin: '20px 0' // Tambahkan margin untuk meningkatkan jarak dengan elemen lain
               }}
               animate={{
                 scale: [1, 1.1, 1], // Animasi maju mundur
@@ -122,7 +132,8 @@ const InvitationBridge = () => {
                 color: '#4682B4',
                 fontFamily: "'Cairo', sans-serif", // Font diubah untuk lebih cantik
                 fontWeight: 'bold', // Font dibuat lebih tebal
-                textShadow: '0 1px 2px rgba(0,0,0,0.1)' // Tambahkan bayangan teks untuk efek 3D
+                textShadow: '0 1px 2px rgba(0,0,0,0.1)', // Tambahkan bayangan teks untuk efek 3D
+                textAlign: 'center' // Pastikan teks ditengah
               }}
             >
               Fathin Muhammad Fadhlullah, S.Kom
@@ -134,7 +145,8 @@ const InvitationBridge = () => {
                 color: '#5F9EA0',
                 fontFamily: "'Cairo', sans-serif", // Font diubah untuk lebih cantik
                 fontWeight: 'bold', // Font dibuat lebih tebal
-                textShadow: '0 1px 2px rgba(0,0,0,0.1)' // Tambahkan bayangan teks untuk efek 3D
+                textShadow: '0 1px 2px rgba(0,0,0,0.1)', // Tambahkan bayangan teks untuk efek 3D
+                textAlign: 'center' // Pastikan teks ditengah
               }}
             >
               Putra pertama
@@ -154,7 +166,8 @@ const InvitationBridge = () => {
               color: '#4682B4',
               fontFamily: "'Cairo', sans-serif", // Font diubah untuk lebih cantik
               fontWeight: 'bold', // Font dibuat lebih tebal
-              textShadow: '0 1px 2px rgba(0,0,0,0.1)' // Tambahkan bayangan teks untuk efek 3D
+              textShadow: '0 1px 2px rgba(0,0,0,0.1)', // Tambahkan bayangan teks untuk efek 3D
+              textAlign: 'center' // Pastikan teks ditengah
             }}
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
@@ -178,7 +191,8 @@ const InvitationBridge = () => {
                 objectFit: "cover",
                 borderColor: "#B0E0E6",
                 boxShadow: '0 5px 15px rgba(135,206,235,0.3)', // Tambahkan bayangan untuk efek 3D
-                borderRadius: '50%' // Pastikan gambar berbentuk lingkaran
+                borderRadius: '50%', // Pastikan gambar berbentuk lingkaran
+                margin: '20px 0' // Tambahkan margin untuk meningkatkan jarak dengan elemen lain
               }}
               animate={{
                 scale: [1, 1.1, 1], // Animasi maju mundur
@@ -196,7 +210,8 @@ const InvitationBridge = () => {
                 color: '#4682B4',
                 fontFamily: "'Cairo', sans-serif", // Font diubah untuk lebih cantik
                 fontWeight: 'bold', // Font dibuat lebih tebal
-                textShadow: '0 1px 2px rgba(0,0,0,0.1)' // Tambahkan bayangan teks untuk efek 3D
+                textShadow: '0 1px 2px rgba(0,0,0,0.1)', // Tambahkan bayangan teks untuk efek 3D
+                textAlign: 'center' // Pastikan teks ditengah
               }}
             >
               Anisa Hafridha Putri, Amd.Kes
@@ -208,7 +223,8 @@ const InvitationBridge = () => {
                 color: '#5F9EA0',
                 fontFamily: "'Cairo', sans-serif", // Font diubah untuk lebih cantik
                 fontWeight: 'bold', // Font dibuat lebih tebal
-                textShadow: '0 1px 2px rgba(0,0,0,0.1)' // Tambahkan bayangan teks untuk efek 3D
+                textShadow: '0 1px 2px rgba(0,0,0,0.1)', // Tambahkan bayangan teks untuk efek 3D
+                textAlign: 'center' // Pastikan teks ditengah
               }}
             >
               Putri pertama

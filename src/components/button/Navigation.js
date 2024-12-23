@@ -13,43 +13,53 @@ const Navigation = () => {
     if (element) {
       window.scrollTo({
         top: element.offsetTop,
-        behavior: "smooth", // Smooth scroll
+        behavior: "smooth",
       });
     }
   };
 
   return (
     <div className="bottom-nav">
-      <div
+      <motion.div
         className="nav-item"
         onClick={() => handleScrollToSection("details")}
+        whileHover={{ scale: 1.1 }}
+        transition={{ duration: 0.5 }}
       >
          <FontAwesomeIcon icon={faEnvelope} className="me-2" />
-      </div>
-      <div
+      </motion.div>
+      <motion.div
         className="nav-item"
         onClick={() => handleScrollToSection("bridge")}
+        whileHover={{ scale: 1.1 }}
+        transition={{ duration: 0.5 }}
       >
         <FontAwesomeIcon icon={faHeart} className="me-2" />
-      </div>
-      <div
+      </motion.div>
+      <motion.div
         className="nav-item"
         onClick={() => handleScrollToSection("weddingDate")}
+        whileHover={{ scale: 1.1 }}
+        transition={{ duration: 0.5 }}
       >
         <FontAwesomeIcon icon={faMapMarkerAlt} className="me-2" />
-      </div>
-      <div
+      </motion.div>
+      <motion.div
         className="nav-item"
         onClick={() => handleScrollToSection("giftSection")}
+        whileHover={{ scale: 1.1 }}
+        transition={{ duration: 0.5 }}
       >
         <FontAwesomeIcon icon={faGifts} className="me-2" />
-      </div>
-      <div
+      </motion.div>
+      <motion.div
         className="nav-item"
         onClick={() => handleScrollToSection("commentForm")}
+        whileHover={{ scale: 1.1 }}
+        transition={{ duration: 0.5 }}
       >
         <FontAwesomeIcon icon={faCommentAlt} className="me-2" />
-      </div>
+      </motion.div>
     </div>
   );
 };

@@ -14,14 +14,11 @@ const InvitationDetails = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        {/* Dekorasi bunga */}
         <div className="flower-frame-top-left flower-top-left"></div>
-        {/* <div className="flower-frame-top-right flower-top-right"></div> */}
-        {/* <div className="flower-frame-bottom-left flower-bottom-left"></div> */}
         <div className="flower-frame-bottom-right flower-bottom-right"></div>
 
         <motion.div className="content">
-          <motion.h1 className="title" whileHover={{ scale: 1.05 }} style={{ fontFamily: 'Playfair Display, serif', fontSize: '2rem' }}>
+          <motion.h1 className="title" whileHover={{ scale: 1.05 }}>
             Wedding Invitation
           </motion.h1>
 
@@ -32,20 +29,20 @@ const InvitationDetails = () => {
             whileHover={{ scale: 1.1 }}
           />
 
-          <motion.h2 className="subtitle" whileHover={{ scale: 1.05 }} style={{ fontFamily: 'Playfair Display, serif', fontSize: '2rem' }}>
+          <motion.h2 className="subtitle" whileHover={{ scale: 1.05 }}>
             Fathin &amp; Fridha
           </motion.h2>
 
-          <motion.p className="wedding-date" style={{ fontFamily: 'Playfair Display, serif', fontSize: '1.5rem' }}>
+          <motion.p className="wedding-date">
             Sabtu, 01 Februari 2025
           </motion.p>
 
           <a
-            href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=The%20Wedding%20of%20Fathin%20and%20Fridha"
+            href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=M3I1aHRlOTdlYTM4NzNldGpxdnZmM2duaG8gZmF0aGlubXVoYW1tYWQ0MEBt&tmsrc=fathinmuhammad40%40gmail.com"
             target="_blank"
             className="save-date-btn"
           >
-            <button style={{ fontFamily: 'Playfair Display, serif', fontSize: '1.5rem' }}>
+            <button>
               <FontAwesomeIcon icon={faCalendarCheck} className="icon" />{" "}
               <span>Save The Date</span>
             </button>
@@ -69,7 +66,7 @@ const InvitationDetails = () => {
             </div>
           </motion.div>
 
-          <motion.p className="scroll-text" style={{ fontFamily: 'Playfair Display, serif', fontSize: '1.5rem' }}>Scroll Down</motion.p>
+          <motion.p className="scroll-text">Scroll Down</motion.p>
         </motion.div>
       </motion.section>
     </div>
