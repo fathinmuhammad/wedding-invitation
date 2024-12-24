@@ -14,10 +14,50 @@ const InvitationDetails = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <div className="flower-frame-top-right flower-top-right"></div>
-        <div className="flower-frame-top-left flower-top-left"></div>
-        <div className="flower-frame-bottom-right flower-bottom-right"></div>        
-        <div className="flower-frame-bottom-left flower-bottom-left"></div>
+        <motion.div 
+          className="flower-frame-top-right flower-top-right" 
+          animate={{
+            scale: [1, 1.1, 1],
+          }}
+          transition={{
+            repeat: Infinity,
+            duration: 1.5,   
+            ease: "easeInOut"
+          }}
+        ></motion.div>
+        <motion.div 
+          className="flower-frame-top-left flower-top-left" 
+          animate={{
+            scale: [1, 1.1, 1],
+          }}
+          transition={{
+            repeat: Infinity,
+            duration: 1.5,   
+            ease: "easeInOut"
+          }}
+        ></motion.div>
+        <motion.div 
+          className="flower-frame-bottom-right flower-bottom-right" 
+          animate={{
+            scale: [1, 1.1, 1],
+          }}
+          transition={{
+            repeat: Infinity,
+            duration: 1.5,   
+            ease: "easeInOut"
+          }}
+        ></motion.div>        
+        <motion.div 
+          className="flower-frame-bottom-left flower-bottom-left"
+          animate={{
+            scale: [1, 1.1, 1],
+          }}
+          transition={{
+            repeat: Infinity,
+            duration: 1.5,   
+            ease: "easeInOut"
+          }}
+        ></motion.div>
 
         <motion.div className="content">
           <motion.h1 className="title" whileHover={{ scale: 1.05 }}>

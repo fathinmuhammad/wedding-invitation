@@ -92,20 +92,7 @@
   }
 
   /* Styling for the comment list */
-  .comment-list {
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid #bdc3c7;
-    border-radius: 10px;
-    background: #fff;
-    box-shadow: 0 2px 4px rgba(52, 152, 219, 0.05);
-  }
-  
-  /* Styling for the comment list title */
-  .comment-list h3 {
-    font-size: 1.5rem;
-    color: #2c3e50;
-  }
+
   
   /* Styling for the comment item */
   .comment-item {
@@ -144,7 +131,10 @@
     width: auto;
     max-width: 500px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   
   /* Styling for the image container */
@@ -304,7 +294,7 @@
   }
   
   /* Styling for the invitation content */
-  .invitation-content {
+  /* .invitation-content {
     background: rgba(255, 255, 255, 0.95);
     padding: 2rem;
     border-radius: 20px;
@@ -312,7 +302,7 @@
     text-align: center;
     max-width: 500px;
     width: auto;
-  }
+  } */
   
   /* Styling for the image container */
   .image-container {
@@ -340,6 +330,7 @@
     font-size: 2rem;
     margin-bottom: 0.5rem;
     font-family: "Royal Wedding", sans-serif;
+    text-align: center;
   }
   
   /* Styling for the invitation couple */
@@ -360,6 +351,7 @@
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    text-align: center;
   }
   
   /* Styling for the guest name */
@@ -371,7 +363,7 @@
   top: 20px; /* Mengubah posisi ke kanan bawah */
   right: 20px; /* Mengubah posisi ke kanan */
   z-index: 1000;
-  color: white;
+  color: rgb(253, 253, 253);
   padding: 10px 20px;
   border-radius: 20px;
   border: none;
@@ -408,7 +400,7 @@
 }
 
 /* Konten Undangan */
-.invitation-content {
+/* .invitation-content {
   background: rgba(255, 255, 255, 0.95);
   padding: 2rem;
   border-radius: 20px;
@@ -416,7 +408,7 @@
   text-align: center;
   max-width: 500px;
   width: auto;
-}
+} */
 
 /* Container Gambar */
 .image-container {
@@ -438,36 +430,16 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Menambahkan box shadow untuk gambar pasangan */
 }
 
-/* Judul */
-/* .invitation-title {
-  color: #87ceeb;
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-  font-family: "Royal Wedding", sans-serif;
-} */
-
-/* .invitation-couple {
-  color: #4682b4;
-  font-size: 24px;
-  margin-bottom: 1.5rem;
-  font-family: "Elsie", sans-serif;
-  font-weight: bold;
-} */
-
-/* Teks Undangan */
-/* .invitation-text {
-  color: #5f9ea0;
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-  font-family: "Playfair Display", serif;
-} */
-
 /* Nama Tamu */
 .guest-name {
   color: #1762ad;
   font-size: 1.2rem;
   font-family: Arial, sans-serif;
   font-weight: bold;
+  position: relative;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
 }
 
 /* Tombol Buka Undangan */
@@ -482,6 +454,12 @@
   transition: all 0.3s ease;
   box-shadow: 0 3px 10px rgba(135, 206, 235, 0.2);
   font-family: "Playfair Display", serif;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 1rem;
+  margin-bottom: 0rem;
 }
 
 .invitation-button:hover {
@@ -492,7 +470,7 @@
 .invitation-footer {
   color: #a9a9a9;
   font-size: 0.8rem;
-  margin-top: 1.5rem;
+  margin-top: 0rem;
   font-family: "Playfair Display", serif;
 }
 
@@ -704,15 +682,6 @@
   font-size: 1.6rem;
   color: #5F9EA0;
 }
-
-/* Paragraph Styles */
-/* .invitation-text {
-  font-size: 1.5rem;
-  color: #778899;
-  font-family: 'Cairo', sans-serif;
-  font-weight: bold;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-} */
 
 /* Image Styles */
 .invitation-image {

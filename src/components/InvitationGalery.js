@@ -2,11 +2,12 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const images = [
+  { id: 1, src: require("../assets/imagesKita/1.jpeg") },
   { id: 2, src: require("../assets/imagesKita/2.jpeg") },
   { id: 3, src: require("../assets/imagesKita/3.jpeg") },
   { id: 4, src: require("../assets/imagesKita/4.jpeg") },
   { id: 5, src: require("../assets/imagesKita/5.jpeg") },
-  { id: 6, src: require("../assets/imagesKita/6.jpeg") },
+  { id: 5, src: require("../assets/imagesKita/6.jpeg") },
 ];
 
 const InvitationGallery = () => {
@@ -22,7 +23,16 @@ const InvitationGallery = () => {
       }}
     >
       <motion.section
-        className="gallery-section"
+        style={{
+          minHeight: '100vh',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          boxShadow: '0 10px 30px rgba(135,206,235,0.2)',
+          borderRadius: '10px',
+          margin: '20px 0',
+          background: 'white'
+        }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
@@ -30,7 +40,7 @@ const InvitationGallery = () => {
         <h2
           style={{
             fontSize: "2.5rem",
-            color: "#87CEEB",
+            color: "#1762ad",
             marginBottom: "1.5rem",
           }}
         >
@@ -49,7 +59,8 @@ const InvitationGallery = () => {
             <motion.div
               key={image.id}
               className="gallery-item"
-              whileHover={{ scale: 1.05 }}
+              whileInView={{ scale: 1 }}
+              viewport={{ once: true }}
               transition={{ duration: 0.3 }}
               style={{
                 overflow: "hidden",

@@ -5,46 +5,71 @@ import cewek from "../assets/images/cewek.png";
 
 const InvitationBridge = () => {
   return (
-    <div className="invitation-wedding-date" style={{
-      minHeight: '100vh',
-      background: 'linear-gradient(rgba(240,248,255,0.9), rgba(176,216,255,0.9))',
-      fontFamily: "'Playfair Display', serif",
-      padding: '2rem 1rem',
-      position: 'relative',
-      overflow: 'hidden',
-      textAlign: 'center',
-      color: '#333',
-      boxShadow: '0 10px 30px rgba(135,206,235,0.2)'
-    }}>
+    <div className="invitation-wedding-date">
         
     <motion.section
-      className="text-center px-2 py-5"
       id="bride"
+      className="invitation-section"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
       style={{
-        background: 'linear-gradient(rgba(240,248,255,0.9), rgba(176,216,255,0.9))',
         minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         boxShadow: '0 10px 30px rgba(135,206,235,0.2)',
         borderRadius: '10px',
-        margin: '20px 0'
+        background: 'white'
       }}
     >
-      {/* <motion.div
-        className="card shadow-lg p-5 mx-auto"
-        style={{
-          maxWidth: 'auto',
-          background: 'rgba(255,255,255,0.95)',
-          borderRadius: '20px',
-          border: '1px solid rgba(135,206,235,0.3)',
-          boxShadow: '0 10px 30px rgba(135,206,235,0.2)',
-          margin: '20px 0'
-        }}
-      > */}
+
+        <motion.div 
+          className="flower-frame-top-right flower-top-right" 
+          animate={{
+            scale: [1, 1.1, 1],
+          }}
+          transition={{
+            repeat: Infinity,
+            duration: 1.5,   
+            ease: "easeInOut"
+          }}
+        ></motion.div>
+        <motion.div 
+          className="flower-frame-top-left flower-top-left" 
+          animate={{
+            scale: [1, 1.1, 1],
+          }}
+          transition={{
+            repeat: Infinity,
+            duration: 1.5,   
+            ease: "easeInOut"
+          }}
+        ></motion.div>
+        <motion.div 
+          className="flower-frame-bottom-right flower-bottom-right" 
+          animate={{
+            scale: [1, 1.1, 1],
+          }}
+          transition={{
+            repeat: Infinity,
+            duration: 1.5,   
+            ease: "easeInOut"
+          }}
+        ></motion.div>        
+        <motion.div 
+          className="flower-frame-bottom-left flower-bottom-left"
+          animate={{
+            scale: [1, 1.1, 1],
+          }}
+          transition={{
+            repeat: Infinity,
+            duration: 1.5,   
+            ease: "easeInOut"
+          }}
+        ></motion.div>
+
+
         <motion.h2
           className="font-arabic py-4 m-0"
           style={{ 
@@ -54,7 +79,8 @@ const InvitationBridge = () => {
             fontWeight: 'bold',
             textShadow: '0 1px 2px rgba(0,0,0,0.1)',
             textAlign: 'center',
-            marginBottom: '0rem'
+            marginBottom: '0rem',
+            marginTop: '3rem'
           }}
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -66,7 +92,7 @@ const InvitationBridge = () => {
         <motion.h2
           className="font-esthetic py-4 m-0"
           style={{ 
-            fontSize: "0.8rem",
+            fontSize: "0.7rem",
             color: '#5F9EA0',
             fontFamily: "'Poppins', sans-serif",
             fontWeight: 'bold',
@@ -85,12 +111,14 @@ const InvitationBridge = () => {
         <motion.p
           className="pb-4 m-0"
           style={{ 
-            fontSize: "0.8rem",
+            fontSize: "0.7rem",
             color: '#778899',
             fontFamily: "'Poppins', sans-serif",
             fontWeight: 'bold',
             textShadow: '0 1px 2px rgba(0,0,0,0.1)',
-            textAlign: 'justify'
+            textAlign: 'justify',
+            marginLeft: '1rem',
+            marginRight: '1rem',
           }}
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -99,12 +127,6 @@ const InvitationBridge = () => {
           Tanpa mengurangi rasa hormat, kami mengundang Anda untuk berkenan menghadiri acara pernikahan kami:
         </motion.p>
 
-        {/* <div className="overflow-x-hidden pb-8"> */}
-          {/* <motion.div
-            initial={{ x: -100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.8 }}
-          > */}
             <motion.img
               src={cowok}
               alt="cowo"
@@ -125,7 +147,7 @@ const InvitationBridge = () => {
             <motion.h2
               className="m-0"
               style={{ 
-                fontSize: "2rem",
+                fontSize: "1.8rem",
                 color: '#1762ad',
                 fontFamily: "'Tangerine', serif",
                 textShadow: '0 1px 2px rgba(0,0,0,0.1)',
@@ -137,7 +159,7 @@ const InvitationBridge = () => {
             </motion.h2>
             <motion.p
               style={{ 
-                fontSize: "1.3rem",
+                fontSize: "1.1rem",
                 color: '#5F9EA0',
                 fontFamily: "'Poppins', sans-serif",
                 textShadow: '0 1px 2px rgba(0,0,0,0.1)',
@@ -150,7 +172,14 @@ const InvitationBridge = () => {
               Putra pertama
             </motion.p>
             <motion.p 
-              style={{color: '#778899', fontFamily: "'Poppins', sans-serif", textShadow: '0 1px 2px rgba(0,0,0,0.1)', marginTop: "0rem", marginBottom: '0rem'}}
+              style={{
+                color: '#778899', 
+                fontFamily: "'Poppins', sans-serif", 
+                textShadow: '0 1px 2px rgba(0,0,0,0.1)', 
+                marginTop: "0rem", 
+                marginBottom: '0rem',
+                fontSize: '0.8rem',
+              }}
             >
               Bapak Mohamad Yasin dan Ibu Hikmah Isnaniyah
             </motion.p>
@@ -199,7 +228,7 @@ const InvitationBridge = () => {
             <motion.h2
               className="font-esthetic m-0"
               style={{ 
-                fontSize: "2rem",
+                fontSize: "1.8rem",
                 color: '#1762ad',
                 fontFamily: "'Tangerine', serif",
                 textShadow: '0 1px 2px rgba(0,0,0,0.1)',
@@ -212,7 +241,7 @@ const InvitationBridge = () => {
             <motion.p
               className="mt-3 mb-1"
               style={{ 
-                fontSize: "1.3rem",
+                fontSize: "1.1rem",
                 color: '#5F9EA0',
                 fontFamily: "'Poppins', sans-serif",
                 textShadow: '0 1px 2px rgba(0,0,0,0.1)',
@@ -226,7 +255,14 @@ const InvitationBridge = () => {
             </motion.p>
             <motion.p 
               className="mb-0"
-              style={{color: '#778899', fontFamily: "'Poppins', sans-serif", textShadow: '0 1px 2px rgba(0,0,0,0.1)', marginTop: "0rem", marginBottom: '0rem'}}
+              style={{
+                color: '#778899', 
+                fontFamily: "'Poppins', sans-serif", 
+                textShadow: '0 1px 2px rgba(0,0,0,0.1)', 
+                marginTop: "0rem", 
+                marginBottom: '6rem',
+                fontSize: '0.8rem',
+              }}
             >
               Bapak Agus Muhayar dan Ibu Husada Prawati
             </motion.p>

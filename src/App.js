@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import InvitationDetails from "./components/InvitationDetails";
 import GiftSection from "./components/GiftSection";
@@ -10,13 +10,23 @@ import InvitationGalery from "./components/InvitationGalery";
 import InvitationEnd from "./components/InvitationEnd";
 import Navigation from "./components/button/Navigation";
 import PlayMusic from "./components/button/PlayMusic";
-import sound from "../src/assets/music/sound2.mp3";
+import sound from "../src/assets/music/sound.mp3";
 
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef(new Audio(sound));
+
+  useEffect(() => {
+    audioRef.current.addEventListener('ended', () => {
+      setIsPlaying(false);
+      setTimeout(() => {
+        audioRef.current.play().catch((error) => console.error("Audio playback error:", error));
+        setIsPlaying(true);
+      }, 1000); // Tunda sebentar sebelum memutar ulang
+    });
+  }, []);
 
   const handleOpen = () => {
     setIsOpen(true);

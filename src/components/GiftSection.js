@@ -7,36 +7,89 @@ import bjb from "../assets/images/bjb.png";
 
 const GiftSection = () => {
   return (
-    <div className="gift-section" style={{
-      minHeight: '100vh',
-      background: 'linear-gradient(rgba(240,248,255,0.9), rgba(176,216,255,0.9))', // Soft blue gradient
-      fontFamily: "'Playfair Display', serif",
-      padding: '2rem 1rem',
-      position: 'relative',
-      overflow: 'hidden',
-      textAlign: 'center'
-    }}>
+    <div 
+      style={{
+        minHeight: "100vh",
+        background: "linear-gradient(rgba(240,248,255,0.9), rgba(176,216,255,0.9))",
+        fontFamily: "'Playfair Display', serif",
+        padding: "2rem 1rem",
+        textAlign: "center",
+      }}
+    >
       <motion.section 
-        className="bg-light pb-4"
+        className="invitation-section"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
           <div className="container text-center">
+
+          <motion.div 
+          className="flower-frame-top-right flower-top-right" 
+          animate={{
+              scale: [1, 1.1, 1],
+          }}
+          transition={{
+              repeat: Infinity,
+              duration: 1.5,   
+              ease: "easeInOut"
+          }}
+          ></motion.div>
+          <motion.div 
+          className="flower-frame-top-left flower-top-left" 
+          animate={{
+              scale: [1, 1.1, 1],
+          }}
+          transition={{
+              repeat: Infinity,
+              duration: 1.5,   
+              ease: "easeInOut"
+          }}
+          ></motion.div>
+          <motion.div 
+          className="flower-frame-bottom-right flower-bottom-right" 
+          animate={{
+              scale: [1, 1.1, 1],
+          }}
+          transition={{
+              repeat: Infinity,
+              duration: 1.5,   
+              ease: "easeInOut"
+          }}
+          ></motion.div>        
+          <motion.div 
+          className="flower-frame-bottom-left flower-bottom-left"
+          animate={{
+              scale: [1, 1.1, 1],
+          }}
+          transition={{
+              repeat: Infinity,
+              duration: 1.5,   
+              ease: "easeInOut"
+          }}
+          ></motion.div>
+
               <motion.h2 
                 className="font-esthetic pt-2 mb-4" 
-                style={{ fontSize: '2.5rem', fontFamily: "'Poppins', sans-serif" }}
+                style={{ fontSize: '2.5rem', color: "#1762ad", fontFamily: "'Poppins', sans-serif" }}
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ duration: 0.5 }}
               >Love Gift</motion.h2>
               <motion.p 
                 className="mb-3" 
-                style={{ fontSize: '0.95rem', fontFamily: "'Poppins', sans-serif" }}
+                style={{ 
+                  fontSize: '0.95rem', 
+                  fontFamily: "'Poppins', sans-serif",
+                  marginLeft: '1rem',
+                  marginRight: '1rem' 
+                }}
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8 }}
-              >Dengan hormat, bagi Anda yang ingin memberikan tanda kasih kepada kami, dapat melalui:</motion.p>
+              >
+                Doa restu Bapak/Ibu sekalian merupakan karunia yang sangat berarti bagi kami. Dan jika memberi merupakan ungkapan tanda kasih, Bapak/Ibu dapat memberi kado secara cashless, dapat melalui:
+              </motion.p>
 
               <motion.div 
                 className="bg-theme-dark rounded-4 shadow p-4 mx-4 mt-2 mb-4 text-start"

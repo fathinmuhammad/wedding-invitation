@@ -253,8 +253,25 @@ const CommentForm = () => {
       </motion.form>
 
       {/* Daftar Komentar */}
-      <div className="comment-list mt-5">
-        <h2>Ucapan</h2>
+      <div className="comment-list mt-5" 
+        style={{
+          maxWidth: "100%",
+          margin: "2rem auto",
+          padding: "2rem",
+          background: "#ffffff",
+          borderRadius: "12px",
+          boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
+        }}
+      >
+        <h2 
+          style={{
+            fontSize: "2.5rem",
+            color: "#4682B4",
+            fontFamily: "'Poppins', sans-serif",
+            letterSpacing: "0.5px",
+            fontWeight: "600",
+          }}
+        >Ucapan</h2>
         {comments.length > 0 ? (
           comments.map((comment, index) => (
             <motion.div

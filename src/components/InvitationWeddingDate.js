@@ -12,7 +12,7 @@ const InvitationWeddingDate = () => {
         seconds: 0,
     });
     
-    const targetDate = new Date("2025-02-01T09:00:00").getTime(); // Ganti tanggal acara Anda di sini
+    const targetDate = new Date("2025-02-01T09:00:00").getTime();
     
     useEffect(() => {
         const timer = setInterval(() => {
@@ -34,25 +34,87 @@ const InvitationWeddingDate = () => {
         }
         }, 1000);
     
-        return () => clearInterval(timer); // Membersihkan interval saat komponen unmount
+        return () => clearInterval(timer);
     }, [targetDate]);
 
   return (
     <div className="invitation-wedding-date" style={{
         minHeight: '100vh',
-        background: 'linear-gradient(rgba(240,248,255,0.9), rgba(176,216,255,0.9))', // Soft blue gradient
+        background: 'linear-gradient(rgba(240,248,255,0.9), rgba(176,216,255,0.9))',
         fontFamily: "'Playfair Display', serif",
         padding: '2rem 1rem',
         position: 'relative',
         overflow: 'hidden',
         textAlign: 'center'
       }}>
-            <section className="bg-black pb-2" id="wedding-date">
+            <section className="invitation-section" 
+                // style={{
+                //     minHeight: '100vh',
+                //     display: 'flex',
+                //     flexDirection: 'column',
+                //     alignItems: 'center',
+                //     boxShadow: '0 10px 30px rgba(135,206,235,0.2)',
+                //     borderRadius: '10px',
+                //     margin: '20px 0',
+                //     background: 'white'
+                //   }}
+                id="wedding-date">
+                        <motion.div 
+                        className="flower-frame-top-right flower-top-right" 
+                        animate={{
+                            scale: [1, 1.1, 1],
+                        }}
+                        transition={{
+                            repeat: Infinity,
+                            duration: 1.5,   
+                            ease: "easeInOut"
+                        }}
+                        ></motion.div>
+                        <motion.div 
+                        className="flower-frame-top-left flower-top-left" 
+                        animate={{
+                            scale: [1, 1.1, 1],
+                        }}
+                        transition={{
+                            repeat: Infinity,
+                            duration: 1.5,   
+                            ease: "easeInOut"
+                        }}
+                        ></motion.div>
+                        <motion.div 
+                        className="flower-frame-bottom-right flower-bottom-right" 
+                        animate={{
+                            scale: [1, 1.1, 1],
+                        }}
+                        transition={{
+                            repeat: Infinity,
+                            duration: 1.5,   
+                            ease: "easeInOut"
+                        }}
+                        ></motion.div>        
+                        <motion.div 
+                        className="flower-frame-bottom-left flower-bottom-left"
+                        animate={{
+                            scale: [1, 1.1, 1],
+                        }}
+                        transition={{
+                            repeat: Infinity,
+                            duration: 1.5,   
+                            ease: "easeInOut"
+                        }}
+                        ></motion.div>
                 <div className="container text-center">
 
                     <motion.h2
                     className="font-esthetic py-2 m-0"
-                    style={{ fontSize: '1.1rem', fontFamily: "'Poppins', sans-serif", color: '#1762ad' }}
+                    style={{ 
+                        fontSize: '1rem', 
+                        fontFamily: "'Poppins', sans-serif", 
+                        color: '#1762ad',
+                        marginLeft: '1rem',
+                        marginRight: '1rem',
+                        marginTop: '2rem' 
+                    }}
                     initial={{ y: 20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 1 }}
@@ -61,7 +123,7 @@ const InvitationWeddingDate = () => {
                     </motion.h2>
 
                     <motion.div
-                    className="bg-theme-dark mt-4 p-3 shadow rounded-4 mb-10" // Tambahkan margin bottom untuk memberikan jarak
+                    className="bg-theme-dark mt-4 p-3 shadow rounded-4 mb-10"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1 }}
@@ -69,7 +131,9 @@ const InvitationWeddingDate = () => {
                         background: 'rgba(255,255,255,0.95)',
                         borderRadius: '20px',
                         border: '1px solid rgba(135,206,235,0.3)',
-                        boxShadow: '0 10px 30px rgba(135,206,235,0.2)'
+                        boxShadow: '0 10px 30px rgba(135,206,235,0.2)',
+                        marginLeft: '1rem',
+                        marginRight: '1rem',
                     }}
                     >
                          <motion.p
@@ -83,27 +147,25 @@ const InvitationWeddingDate = () => {
                         </motion.p>
                         <motion.p
                         className="p-1 mb-3"
-                        style={{ fontSize: '0.95rem', color: '#778899', textAlign: 'justify', marginTop: '1rem', marginLeft: '1rem', marginRight: '1rem', marginBottom: '2rem' }}
+                        style={{ 
+                            fontSize: '0.95rem', 
+                            color: '#778899', 
+                            textAlign: 'justify', 
+                            marginTop: '1rem', 
+                            marginLeft: '1rem', 
+                            marginRight: '1rem', 
+                            marginBottom: '2rem' 
+                        }}
                         initial={{ y: 20, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 1 }}
                         >
                         Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan untukmu dari (jenis) dirimu sendiri agar kamu merasa tenteram kepadanya. Dia menjadikan di antaramu rasa cinta dan kasih sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.
                         </motion.p>
-                        {/* <motion.button
-                        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                        target="_blank"
-                        href="https://quran.com/id/30/21"
-                        initial={{ y: 20, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        transition={{ duration: 1 }}
-                        style={{ color: '#5F9EA0' }}
-                        >
-                        QS. Adh-Dhariyat: 49
-                        </motion.button> */}
                         <a
                             href="https://quran.com/id/30/21"
                             target="_blank"
+                            rel="noopener noreferrer"
                             className="save-date-btn"
                         >
                             <button style={{
@@ -112,7 +174,7 @@ const InvitationWeddingDate = () => {
                                 color: '#1762ad',
                                 textShadow: '2px 2px 4px rgba(135, 206, 235, 0.2)',
                                 padding: '0.8rem 2rem',
-                                backgroundColor: '#f0f8ff',
+                                background: '#f0f8ff',
                                 border: '2px solid #87ceeb',
                                 borderRadius: '50px',
                                 cursor: 'pointer',
@@ -129,11 +191,14 @@ const InvitationWeddingDate = () => {
                     <div
                         className="border rounded-pill shadow py-2 px-4 mt-2 mb-4"
                         style={{
-                            display: "grid", // Menggunakan grid
-                            gridTemplateColumns: "repeat(7, auto)", // Membagi kolom untuk angka dan tanda ':'
-                            gap: "0.5rem", // Jarak antar kolom
-                            alignItems: "center", // Posisi vertikal di tengah
-                            justifyItems: "center", // Posisi horizontal di tengah
+                            display: "grid",
+                            gridTemplateColumns: "repeat(7, auto)",
+                            gap: "0.5rem",
+                            alignItems: "center",
+                            justifyItems: "center",
+                            // boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
+                            marginLeft: '3rem',
+                            marginRight: '3rem',
                         }}
                         >
                         {/* Hari */}
@@ -163,7 +228,6 @@ const InvitationWeddingDate = () => {
                             </small>
                         </div>
 
-                        {/* Separator ':' */}
                         <span style={{ fontSize: "1.5rem", color: "#1762ad", fontWeight: "bold" }}>
                             :
                         </span>
@@ -261,12 +325,37 @@ const InvitationWeddingDate = () => {
                         </div>
 
     
-                    <motion.p className="py-2 m-0" style={{ fontSize: '0.95rem', fontFamily: "'Poppins', sans-serif", marginBottom:'0rem' }} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta'ala, insyaAllah kami akan menyelenggarakan acara:</motion.p>
+                    <motion.p className="py-2 m-0" 
+                        style={{ 
+                                fontSize: '0.95rem', 
+                                fontFamily: "'Poppins', sans-serif", 
+                                marginBottom:'0.8rem',
+                                marginLeft: '1rem',
+                                marginRight: '1rem', 
+                            }} 
+                        initial={{ opacity: 0, y: 20 }} 
+                        animate={{ opacity: 1, y: 0 }} 
+                        transition={{ duration: 1 }}>
+                            Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta'ala, 
+                            insyaAllah kami akan menyelenggarakan acara:
+                    </motion.p>
     
     
                     <div className="overflow-x-hidden">
                         <div className="py-2" data-aos="fade-right" data-aos-duration="1500">
-                            <motion.h2 className="font-esthetic m-0 py-2" style={{ fontSize: '2rem', color: '#1762ad', fontFamily: "'Poppins', sans-serif", marginTop: '0rem', marginBottom:'0rem' }} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>Akad</motion.h2>
+                            <motion.h2 className="font-esthetic m-0 py-2" 
+                                    style={{ 
+                                        fontSize: '2rem', 
+                                        color: '#1762ad', 
+                                        fontFamily: "'Poppins', sans-serif", 
+                                        marginTop: '0rem', 
+                                        marginBottom:'0rem' 
+                                    }} 
+                                    initial={{ opacity: 0, y: 20 }} 
+                                    animate={{ opacity: 1, y: 0 }} 
+                                    transition={{ duration: 1 }}>
+                                        Akad
+                            </motion.h2>
                             <p style={{ fontSize: '1rem', fontFamily: "'Poppins', sans-serif", marginTop: '0rem', marginBottom:'0rem' }}>Pukul 09.00 WIB - Selesai</p>
                         </div>
     
@@ -277,24 +366,49 @@ const InvitationWeddingDate = () => {
                     </div>
     
                     <div className="py-2">
-                        <a href="https://maps.app.goo.gl/YM3oyTn7xPTgpyjeA" target="_blank" className="btn btn-outline-light btn-sm rounded-pill shadow mb-2 px-3" style={{ backgroundColor: '#B0E0E6' }}>
-                            {/* <i className="fa-solid fa-map-location-dot me-2"></i>Lihat Google Maps */}
-                            <button style={{
-                            background: '#1762ad',
-                            color: 'white',
-                            padding: '0.8rem 2rem',
-                            border: 'none',
-                            borderRadius: '50px',
-                            fontSize: '1.1rem',
-                            cursor: 'pointer',
-                            transition: 'all 0.3s ease',
-                            boxShadow: '0 3px 10px rgba(135,206,235,0.2)'
-                            }}> <FontAwesomeIcon icon={faMapLocationDot} className="me-2" /> Lihat Google Maps</button>
+                        <a 
+                            href="https://maps.app.goo.gl/YM3oyTn7xPTgpyjeA" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="btn btn-outline-light btn-sm rounded-pill shadow mb-2 px-3" 
+                            style={{ background: '#B0E0E6' }}>
+                                <button style={{
+                                    background: '#1762ad',
+                                    color: 'white',
+                                    padding: '0.8rem 2rem',
+                                    border: 'none',
+                                    borderRadius: '50px',
+                                    fontSize: '1.1rem',
+                                    cursor: 'pointer',
+                                    transition: 'all 0.3s ease',
+                                    boxShadow: '0 3px 10px rgba(135,206,235,0.2)'
+                                    }}
+                                > 
+                                    <FontAwesomeIcon icon={faMapLocationDot} className="me-2" /> 
+                                    Lihat Google Maps
+                                </button>
                         </a>                        
                     </div>
                     <br/>
-                    <div className="py-2">
-                        <small className="d-block my-1" style={{fontSize: '0.95rem',fontFamily: "'Poppins', sans-serif"}}>Gg. H. Togog 2, Kel. Pondok Aren, Kec. Pondok Aren, Kota Tangerang Selatan, Banten 15224</small>
+                    <div className="text-center mb-4"
+                        style={{
+                            marginBottom:'3rem',
+                            marginLeft: '1rem',
+                            marginRight: '1rem',
+                        }}
+                    >
+                        <motion.small 
+                            style={{
+                                fontSize: '1rem',
+                                fontFamily: "'Poppins', sans-serif",
+                                textAlign: 'center',
+                                }}
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 1 }}
+                            whileHover={{ scale: 1.05 }}>
+                                    Gg. H. Togog 2, Kel. Pondok Aren, Kec. Pondok Aren, Kota Tangerang Selatan, Banten 15224
+                        </motion.small>
                     </div>
                 </div>
             </section>

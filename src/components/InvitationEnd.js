@@ -15,12 +15,67 @@ const InvitationEnd = () => {
       }}>
         
         <motion.section 
-        className="bg-black pb-5"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
+          style={{
+            minHeight: '100vh',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            boxShadow: '0 10px 30px rgba(135,206,235,0.2)',
+            borderRadius: '10px',
+            margin: '20px 0',
+            background: 'white'
+          }}
+          className="invitation-section"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
         >
             <div className="container text-center">
+
+            <motion.div 
+            className="flower-frame-top-right flower-top-right" 
+            animate={{
+                scale: [1, 1.1, 1],
+            }}
+            transition={{
+                repeat: Infinity,
+                duration: 1.5,   
+                ease: "easeInOut"
+            }}
+            ></motion.div>
+            <motion.div 
+            className="flower-frame-top-left flower-top-left" 
+            animate={{
+                scale: [1, 1.1, 1],
+            }}
+            transition={{
+                repeat: Infinity,
+                duration: 1.5,   
+                ease: "easeInOut"
+            }}
+            ></motion.div>
+            <motion.div 
+            className="flower-frame-bottom-right flower-bottom-right" 
+            animate={{
+                scale: [1, 1.1, 1],
+            }}
+            transition={{
+                repeat: Infinity,
+                duration: 1.5,   
+                ease: "easeInOut"
+            }}
+            ></motion.div>        
+            <motion.div 
+            className="flower-frame-bottom-left flower-bottom-left"
+            animate={{
+                scale: [1, 1.1, 1],
+            }}
+            transition={{
+                repeat: Infinity,
+                duration: 1.5,   
+                ease: "easeInOut"
+            }}
+            ></motion.div>
 
               <motion.div
                   className="bg-theme-dark mt-4 p-3 shadow rounded-4 mb-10" // Tambahkan margin bottom untuk memberikan jarak
@@ -31,12 +86,19 @@ const InvitationEnd = () => {
                       background: 'rgba(255,255,255,0.95)',
                       borderRadius: '20px',
                       border: '1px solid rgba(135,206,235,0.3)',
-                      boxShadow: '0 10px 30px rgba(135,206,235,0.2)'
+                      boxShadow: '0 10px 30px rgba(135,206,235,0.2)',
+                      marginLeft: '1rem',
+                      marginRight: '1rem',
+                      marginTop: '1.5rem'
                   }}
                   >
                   <motion.p
                   className="p-1 mb-3"
-                  style={{ fontSize: "0.95rem", fontFamily: "'Cairo', sans-serif", textAlign: "center" }}
+                  style={{ 
+                    fontSize: "0.95rem", 
+                    fontFamily: "'Cairo', sans-serif", 
+                    textAlign: "center",                   
+                  }}
                   initial={{ y: 20, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ duration: 1 }}
@@ -47,7 +109,12 @@ const InvitationEnd = () => {
 
                 <motion.h2 
                 className="font-esthetic" 
-                style={{ fontSize: "1rem", fontFamily: "'Poppins', sans-serif", color: '#1762ad', fontStyle: 'italic' }}
+                style={{ 
+                  fontSize: "1rem", 
+                  color: '#5F9EA0',
+                  fontFamily: "'Poppins', sans-serif",
+                  fontStyle: 'italic' 
+                }}
                 initial={{ x: "-100vw" }}
                 animate={{ x: 0 }}
                 transition={{ duration: 0.7 }}
@@ -68,19 +135,18 @@ const InvitationEnd = () => {
                 src={bgImage}
                 alt="Fathin & Fridha"
                 style={{
-                    width: '350px',
-                    height: '350px',
+                    width: '250px',
+                    height: '250px',
                     objectFit: 'cover',
                     borderRadius: '50%',
                 }}
-                whileHover={{ scale: 1.1 }}
+                initial={{ scale: 0 }}
                 animate={{
-                  scale: [1, 1.1, 1], // Animasi maju mundur
+                  scale: 1,
                 }}
                 transition={{
-                  repeat: Infinity, // Animasi berulang
-                  duration: 1.5,    // Durasi animasi
-                  ease: "easeInOut" // Efek halus saat animasi
+                  duration: 1.5,   
+                  ease: "easeInOut"
                 }}
             />
                
