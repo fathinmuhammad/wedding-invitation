@@ -178,7 +178,7 @@ const InvitationBridge = () => {
                 textShadow: '0 1px 2px rgba(0,0,0,0.1)', 
                 marginTop: "0rem", 
                 marginBottom: '0rem',
-                fontSize: '0.8rem',
+                fontSize: '0.6rem',
               }}
             >
               Bapak Mohamad Yasin dan Ibu Hikmah Isnaniyah
@@ -261,7 +261,7 @@ const InvitationBridge = () => {
                 textShadow: '0 1px 2px rgba(0,0,0,0.1)', 
                 marginTop: "0rem", 
                 marginBottom: '6rem',
-                fontSize: '0.8rem',
+                fontSize: '0.6rem',
               }}
             >
               Bapak Agus Muhayar dan Ibu Husada Prawati
