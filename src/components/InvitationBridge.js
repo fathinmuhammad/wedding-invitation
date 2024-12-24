@@ -147,7 +147,7 @@ const InvitationBridge = () => {
             <motion.h2
               className="m-0"
               style={{ 
-                fontSize: "1.8rem",
+                fontSize: "1.5rem",
                 color: '#1762ad',
                 fontFamily: "'Tangerine', serif",
                 textShadow: '0 1px 2px rgba(0,0,0,0.1)',
@@ -159,7 +159,7 @@ const InvitationBridge = () => {
             </motion.h2>
             <motion.p
               style={{ 
-                fontSize: "1.1rem",
+                fontSize: "1rem",
                 color: '#5F9EA0',
                 fontFamily: "'Poppins', sans-serif",
                 textShadow: '0 1px 2px rgba(0,0,0,0.1)',
@@ -228,7 +228,7 @@ const InvitationBridge = () => {
             <motion.h2
               className="font-esthetic m-0"
               style={{ 
-                fontSize: "1.8rem",
+                fontSize: "1.5rem",
                 color: '#1762ad',
                 fontFamily: "'Tangerine', serif",
                 textShadow: '0 1px 2px rgba(0,0,0,0.1)',
@@ -241,7 +241,7 @@ const InvitationBridge = () => {
             <motion.p
               className="mt-3 mb-1"
               style={{ 
-                fontSize: "1.1rem",
+                fontSize: "1rem",
                 color: '#5F9EA0',
                 fontFamily: "'Poppins', sans-serif",
                 textShadow: '0 1px 2px rgba(0,0,0,0.1)',
