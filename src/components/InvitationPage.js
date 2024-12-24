@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import bgImage from "../assets/images/bg2.png";
+import bgImage from "../assets/images/bg.png";
 
 const InvitationPage = ({ onOpen }) => {
   const params = new URLSearchParams(window.location.search);
@@ -8,7 +8,6 @@ const InvitationPage = ({ onOpen }) => {
 
   return (
     <motion.div
-      className="invitation-container"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
@@ -25,12 +24,11 @@ const InvitationPage = ({ onOpen }) => {
               className="profile-img" 
               initial={{ scale: 0 }} 
               animate={{
-                scale: [1, 1.1, 1], // Animasi maju mundur
+                scale: 1,
               }}
               transition={{
-                repeat: Infinity, // Animasi berulang
-                duration: 1.5,    // Durasi animasi
-                ease: "easeInOut" // Efek halus saat animasi
+                duration: 1.5,   
+                ease: "easeInOut"
               }}
           />
         {/* <motion.div

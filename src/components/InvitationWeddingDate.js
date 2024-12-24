@@ -52,12 +52,12 @@ const InvitationWeddingDate = () => {
 
                     <motion.h2
                     className="font-esthetic py-2 m-0"
-                    style={{ fontSize: '1.5rem', fontFamily: "'Poppins', sans-serif", color: '#4682B4' }}
+                    style={{ fontSize: '1.1rem', fontFamily: "'Poppins', sans-serif", color: '#1762ad' }}
                     initial={{ y: 20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 1 }}
                     >
-                    Allah Subhanahu Wa Ta'ala berfirman
+                    Allah Subhanahu Wa Ta'ala, berfirman
                     </motion.h2>
 
                     <motion.div
@@ -72,63 +72,59 @@ const InvitationWeddingDate = () => {
                         boxShadow: '0 10px 30px rgba(135,206,235,0.2)'
                     }}
                     >
-                        <motion.p
+                         <motion.p
                         className="p-1 mb-3"
-                        style={{ fontSize: '0.95rem', color: '#778899' }}
+                        style={{ fontSize: '0.95rem', color: '#778899', marginTop: '1rem', marginLeft: '1rem', marginRight: '1rem', marginBottom: '1rem' }}
                         initial={{ y: 20, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 1 }}
                         >
-                        Dan segala sesuatu Kami ciptakan berpasang-pasangan agar kamu mengingat (kebesaran Allah).
+                        وَمِنۡ اٰيٰتِهٖۤ اَنۡ خَلَقَ لَكُمۡ مِّنۡ اَنۡفُسِكُمۡ اَزۡوَاجًا لِّتَسۡكُنُوۡۤا اِلَيۡهَا وَجَعَلَ بَيۡنَكُمۡ مَّوَدَّةً وَّرَحۡمَةً  ؕ اِنَّ فِىۡ ذٰ لِكَ لَاٰيٰتٍ لِّقَوۡمٍ يَّتَفَكَّرُوۡنَ
                         </motion.p>
-                        <motion.a
-                        className="m-0 p-0 text-dark link-offset-2"
+                        <motion.p
+                        className="p-1 mb-3"
+                        style={{ fontSize: '0.95rem', color: '#778899', textAlign: 'justify', marginTop: '1rem', marginLeft: '1rem', marginRight: '1rem', marginBottom: '2rem' }}
+                        initial={{ y: 20, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ duration: 1 }}
+                        >
+                        Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan untukmu dari (jenis) dirimu sendiri agar kamu merasa tenteram kepadanya. Dia menjadikan di antaramu rasa cinta dan kasih sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.
+                        </motion.p>
+                        {/* <motion.button
+                        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                         target="_blank"
-                        href="https://quran.com/id/51/49"
+                        href="https://quran.com/id/30/21"
                         initial={{ y: 20, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 1 }}
                         style={{ color: '#5F9EA0' }}
                         >
                         QS. Adh-Dhariyat: 49
-                        </motion.a>
-                    </motion.div>
-                    <br/>
-                    <motion.div
-                    className="bg-theme-dark mt-10 p-3 shadow rounded-4 mb-4" // Tambahkan margin bottom untuk memberikan jarak
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1 }}
-                    style={{
-                        background: 'rgba(255,255,255,0.95)',
-                        borderRadius: '20px',
-                        border: '1px solid rgba(135,206,235,0.3)',
-                        boxShadow: '0 10px 30px rgba(135,206,235,0.2)'
-                    }}
-                    >
-                        <motion.p
-                        className="p-1 mb-3"
-                        style={{ fontSize: '0.95rem', color: '#778899' }}
-                        initial={{ y: 20, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        transition={{ duration: 1 }}
+                        </motion.button> */}
+                        <a
+                            href="https://quran.com/id/30/21"
+                            target="_blank"
+                            className="save-date-btn"
                         >
-                        dan sesungguhnya Dialah yang menciptakan pasangan laki-laki dan perempuan,
-                        </motion.p>
-                        <motion.a
-                        className="m-0 p-0 text-dark link-offset-2"
-                        target="_blank"
-                        href="https://quran.com/id/53/45"
-                        initial={{ y: 20, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        transition={{ duration: 1 }}
-                        style={{ color: '#5F9EA0' }}
-                        >
-                        QS. An-Najm: 45
-                        </motion.a>
+                            <button style={{
+                                fontFamily: 'Playfair Display, serif',
+                                fontSize: '1rem',
+                                color: '#1762ad',
+                                textShadow: '2px 2px 4px rgba(135, 206, 235, 0.2)',
+                                padding: '0.8rem 2rem',
+                                backgroundColor: '#f0f8ff',
+                                border: '2px solid #87ceeb',
+                                borderRadius: '50px',
+                                cursor: 'pointer',
+                                transition: 'all 0.3s ease',
+                                marginBottom: '3rem'
+                            }}>
+                            <span>QS. Ar-Rum: 21</span>
+                            </button>
+                        </a>
                     </motion.div>
 
-                    <motion.h2 className="font-esthetic py-4 m-0" style={{ fontSize: '2rem', color: '#4682B4', fontFamily: "'Poppins', sans-serif" }} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>Moment Bahagia</motion.h2>
+                    <motion.h2 className="font-esthetic py-4 m-0" style={{ fontSize: '2rem', color: '#1762ad', fontFamily: "'Poppins', sans-serif", marginBottom: "0rem" }} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>Moment Bahagia</motion.h2>
     
                     <div
                         className="border rounded-pill shadow py-2 px-4 mt-2 mb-4"
@@ -150,7 +146,7 @@ const InvitationWeddingDate = () => {
                             style={{
                                 fontSize: "1.5rem",
                                 fontFamily: "Arial, sans-serif",
-                                color: "#4682B4",
+                                color: "#1762ad",
                                 fontWeight: "bold",
                             }}
                             >
@@ -168,7 +164,7 @@ const InvitationWeddingDate = () => {
                         </div>
 
                         {/* Separator ':' */}
-                        <span style={{ fontSize: "1.5rem", color: "#4682B4", fontWeight: "bold" }}>
+                        <span style={{ fontSize: "1.5rem", color: "#1762ad", fontWeight: "bold" }}>
                             :
                         </span>
 
@@ -182,7 +178,7 @@ const InvitationWeddingDate = () => {
                             style={{
                                 fontSize: "1.5rem",
                                 fontFamily: "Arial, sans-serif",
-                                color: "#4682B4",
+                                color: "#1762ad",
                                 fontWeight: "bold",
                             }}
                             >
@@ -200,7 +196,7 @@ const InvitationWeddingDate = () => {
                         </div>
 
                         {/* Separator ':' */}
-                        <span style={{ fontSize: "1.5rem", color: "#4682B4", fontWeight: "bold" }}>
+                        <span style={{ fontSize: "1.5rem", color: "#1762ad", fontWeight: "bold" }}>
                             :
                         </span>
 
@@ -214,7 +210,7 @@ const InvitationWeddingDate = () => {
                             style={{
                                 fontSize: "1.5rem",
                                 fontFamily: "Arial, sans-serif",
-                                color: "#4682B4",
+                                color: "#1762ad",
                                 fontWeight: "bold",
                             }}
                             >
@@ -232,7 +228,7 @@ const InvitationWeddingDate = () => {
                         </div>
 
                         {/* Separator ':' */}
-                        <span style={{ fontSize: "1.5rem", color: "#4682B4", fontWeight: "bold" }}>
+                        <span style={{ fontSize: "1.5rem", color: "#1762ad", fontWeight: "bold" }}>
                             :
                         </span>
 
@@ -246,7 +242,7 @@ const InvitationWeddingDate = () => {
                             style={{
                                 fontSize: "1.5rem",
                                 fontFamily: "Arial, sans-serif",
-                                color: "#4682B4",
+                                color: "#1762ad",
                                 fontWeight: "bold",
                             }}
                             >
@@ -265,18 +261,18 @@ const InvitationWeddingDate = () => {
                         </div>
 
     
-                    <motion.p className="py-2 m-0" style={{ fontSize: '0.95rem', fontFamily: "'Poppins', sans-serif" }} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta'ala, insyaAllah kami akan menyelenggarakan acara:</motion.p>
+                    <motion.p className="py-2 m-0" style={{ fontSize: '0.95rem', fontFamily: "'Poppins', sans-serif", marginBottom:'0rem' }} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta'ala, insyaAllah kami akan menyelenggarakan acara:</motion.p>
     
     
                     <div className="overflow-x-hidden">
                         <div className="py-2" data-aos="fade-right" data-aos-duration="1500">
-                            <motion.h2 className="font-esthetic m-0 py-2" style={{ fontSize: '2rem', color: '#4682B4', fontFamily: "'Poppins', sans-serif" }} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>Akad</motion.h2>
-                            <p style={{ fontSize: '0.95rem', fontFamily: "'Poppins', sans-serif" }}>Pukul 09.00 WIB - Selesai</p>
+                            <motion.h2 className="font-esthetic m-0 py-2" style={{ fontSize: '2rem', color: '#1762ad', fontFamily: "'Poppins', sans-serif", marginTop: '0rem', marginBottom:'0rem' }} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>Akad</motion.h2>
+                            <p style={{ fontSize: '1rem', fontFamily: "'Poppins', sans-serif", marginTop: '0rem', marginBottom:'0rem' }}>Pukul 09.00 WIB - Selesai</p>
                         </div>
     
                         <div className="py-2" data-aos="fade-left" data-aos-duration="1500">
-                            <motion.h2 className="font-esthetic m-0 py-2" style={{ fontSize: '2rem', color: '#4682B4', fontFamily: "'Poppins', sans-serif" }} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>Resepsi</motion.h2>
-                            <p style={{ fontSize: '0.95rem', fontFamily: "'Poppins', sans-serif" }}>Pukul 11.00 WIB - Selesai</p>
+                            <motion.h2 className="font-esthetic m-0 py-2" style={{ fontSize: '2rem', color: '#1762ad', fontFamily: "'Poppins', sans-serif", marginTop: '0rem', marginBottom:'0rem' }} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>Resepsi</motion.h2>
+                            <p style={{ fontSize: '1rem', fontFamily: "'Poppins', sans-serif", marginTop: '0rem', marginBottom:'1rem' }}>Pukul 10.00 WIB - Selesai</p>
                         </div>
                     </div>
     
@@ -284,7 +280,7 @@ const InvitationWeddingDate = () => {
                         <a href="https://maps.app.goo.gl/YM3oyTn7xPTgpyjeA" target="_blank" className="btn btn-outline-light btn-sm rounded-pill shadow mb-2 px-3" style={{ backgroundColor: '#B0E0E6' }}>
                             {/* <i className="fa-solid fa-map-location-dot me-2"></i>Lihat Google Maps */}
                             <button style={{
-                            background: '#87CEEB',
+                            background: '#1762ad',
                             color: 'white',
                             padding: '0.8rem 2rem',
                             border: 'none',

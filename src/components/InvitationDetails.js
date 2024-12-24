@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendarCheck } from "@fortawesome/free-solid-svg-icons";
-import bgImage from "../assets/images/bg2.png";
+import bgImage from "../assets/images/bg.png";
 
 const InvitationDetails = () => {
   return (
@@ -14,8 +14,10 @@ const InvitationDetails = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
+        <div className="flower-frame-top-right flower-top-right"></div>
         <div className="flower-frame-top-left flower-top-left"></div>
-        <div className="flower-frame-bottom-right flower-bottom-right"></div>
+        <div className="flower-frame-bottom-right flower-bottom-right"></div>        
+        <div className="flower-frame-bottom-left flower-bottom-left"></div>
 
         <motion.div className="content">
           <motion.h1 className="title" whileHover={{ scale: 1.05 }}>
@@ -28,12 +30,11 @@ const InvitationDetails = () => {
             className="profile-img"
             whileHover={{ scale: 1.1 }}
             animate={{
-              scale: [1, 1.1, 1], // Animasi maju mundur
+              scale: 1,
             }}
             transition={{
-              repeat: Infinity, // Animasi berulang
-              duration: 1.5,    // Durasi animasi
-              ease: "easeInOut" // Efek halus saat animasi
+              duration: 1.5,   
+              ease: "easeInOut"
             }}
           />
 

@@ -141,7 +141,7 @@
     background: #ffffff;
     border-radius: 15px;
     padding: 20px;
-    width: 90%;
+    width: auto;
     max-width: 500px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
@@ -311,7 +311,7 @@
     box-shadow: 0 10px 30px rgba(135, 206, 235, 0.2);
     text-align: center;
     max-width: 500px;
-    width: 90%;
+    width: auto;
   }
   
   /* Styling for the image container */
@@ -344,13 +344,13 @@
   
   /* Styling for the invitation couple */
   .invitation-couple { 
-    color: #11212e;
+    color: #1762ad;
     font-size: 40px;
-    margin-bottom: 2rem;
-    font-family: 'Great Vibes', cursive;;
-    font-weight: bold;
+    margin-bottom: 0.5rem;
+    font-family: 'Great Vibes', cursive;
     text-align: center;
     line-height: 1.6;
+    margin-top: 0rem;
   }
   
   /* Styling for the invitation text */
@@ -415,7 +415,7 @@
   box-shadow: 0 10px 30px rgba(135, 206, 235, 0.2);
   text-align: center;
   max-width: 500px;
-  width: 90%;
+  width: auto;
 }
 
 /* Container Gambar */
@@ -464,7 +464,7 @@
 
 /* Nama Tamu */
 .guest-name {
-  color: #4682b4;
+  color: #1762ad;
   font-size: 1.2rem;
   font-family: Arial, sans-serif;
   font-weight: bold;
@@ -517,15 +517,16 @@
 .content {
   position: relative;
   z-index: 2;
-  backdrop-filter: blur(5px);
+  /* backdrop-filter: blur(5px); */
 }
 
 .title {
   font-family: 'Royal Wedding', sans-serif;
   font-size: 2rem;
-  color: #4682b4;
+  color: #1762ad;
   text-shadow: 2px 2px 4px rgba(135, 206, 235, 0.2);
   margin-bottom: 1rem;
+  margin-top: 6rem;
 }
 
 .subtitle {
@@ -538,10 +539,11 @@
 
 .wedding-date {
   font-family: 'Playfair Display', serif;
-  font-size: 1rem;
+  font-size: 1.4rem;
   color: #4682b4;
   text-shadow: 2px 2px 4px rgba(135, 206, 235, 0.2);
   margin-bottom: 1.5rem;
+  margin-top: 0.4rem;
 }
 
 .save-date-btn button {
@@ -589,13 +591,22 @@
 }
 
 .profile-img {
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   object-fit: cover;
   /* border-radius: 50%;
   border: 3px solid #fff;
   box-shadow: 0 5px 15px rgba(135, 206, 235, 0.3); */
   margin: 1.5rem 0;
+}
+
+.flower-frame-top-right {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background-image: url("/src/assets/images/FrameTopRight.png");
+  background-size: cover;
+  z-index: 1;
 }
 
 .flower-frame-top-left {
@@ -616,8 +627,27 @@
   z-index: 1;
 }
 
+.flower-frame-bottom-left {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background-image: url("/src/assets/images/FrameBottomLeft.png");
+  background-size: cover;
+  z-index: 1;
+}
+
 .flower-top-left {
   top: -20px;
+  left: -20px;
+}
+
+.flower-top-right {
+  top: -20px;
+  right: -20px;
+}
+
+.flower-bottom-left {
+  bottom: -20px;
   left: -20px;
 }
 
