@@ -89,6 +89,7 @@ const InvitationDetails = () => {
         <a
           href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=M3I1aHRlOTdlYTM4NzNldGpxdnZmM2duaG8gZmF0aGlubXVoYW1tYWQ0MEBt&tmsrc=fathinmuhammad40%40gmail.com"
           target="_blank"
+          rel="noreferrer"
           className="save-date-btn"
         >
           <button>
