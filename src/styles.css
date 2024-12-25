@@ -641,6 +641,7 @@
   position: relative;
   overflow: hidden;
   text-align: center;
+  font-size: 0.7rem;
 }
 
 /* Section Styles */

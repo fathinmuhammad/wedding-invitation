@@ -109,7 +109,9 @@ const CommentForm = () => {
           Ucapan &amp; Doa
         </h2>
 
-        
+        <p style={{ fontSize: "0.7rem", color: "rgb(23, 98, 173)", marginBottom: "0rem" }}>
+          Berikan ucapan terbaik untuk kedua mempelai
+        </p>
 
         <motion.div
           className="bg-theme-dark mt-4 p-3 shadow rounded-4 mb-10"
@@ -159,7 +161,7 @@ const CommentForm = () => {
               }}
             >
               <span style={{ fontSize: '1rem' }}>{countAttendance("Hadir")}</span>
-              <span style={{ fontSize: '0.6rem' }}>Hadir</span>
+              <span style={{ fontSize: '0.45rem' }}>Hadir</span>
             </div>
             <div
               style={{
@@ -179,7 +181,7 @@ const CommentForm = () => {
               }}
             >
               <span style={{ fontSize: '1rem' }}>{countAttendance("Tidak Hadir")}</span>
-              <span style={{ fontSize: '0.6rem' }}>Tidak Hadir</span>
+              <span style={{ fontSize: '0.45rem' }}>Tidak Hadir</span>
             </div>
             <div
               style={{
@@ -199,7 +201,7 @@ const CommentForm = () => {
               }}
             >
               <span style={{ fontSize: '1rem' }}>{countAttendance("Masih Ragu")}</span>
-              <span style={{ fontSize: '0.6rem' }}>Masih Ragu</span>
+              <span style={{ fontSize: '0.45rem' }}>Masih Ragu</span>
             </div>
           </div>
 
@@ -305,7 +307,7 @@ const CommentForm = () => {
                           alignItems: 'center',
                           justifyContent: 'center',
                           fontWeight: 'bold',
-                          fontSize: '0.8rem',
+                          fontSize: '12px',
                           marginRight: '0.5rem',
                           marginLeft: '0.3rem',
                           marginTop: '0.3rem'

@@ -79,7 +79,7 @@ const GiftSection = () => {
               <motion.p 
                 className="mb-3" 
                 style={{ 
-                  fontSize: '0.95rem', 
+                  fontSize: '0.9rem', 
                   fontFamily: "'Poppins', sans-serif",
                   marginLeft: '1rem',
                   marginRight: '1rem' 
@@ -88,7 +88,8 @@ const GiftSection = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8 }}
               >
-                Doa restu Bapak/Ibu sekalian merupakan karunia yang sangat berarti bagi kami. Dan jika memberi merupakan ungkapan tanda kasih, Bapak/Ibu dapat memberi kado secara cashless, dapat melalui:
+                Doa restu Bapak/Ibu sekalian merupakan karunia yang sangat berarti bagi kami. 
+                Dan jika memberi merupakan ungkapan tanda kasih, Bapak/Ibu dapat memberi kado secara cashless, melalui:
               </motion.p>
 
               <motion.div 

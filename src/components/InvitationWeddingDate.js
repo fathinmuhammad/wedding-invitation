@@ -384,7 +384,7 @@ const InvitationWeddingDate = () => {
                                     boxShadow: '0 3px 10px rgba(135,206,235,0.2)'
                                     }}
                                 > 
-                                    <FontAwesomeIcon icon={faMapLocationDot} className="me-2" /> 
+                                    <FontAwesomeIcon icon={faMapLocationDot} className="me-2" style={{marginRight: '0.3rem'}} /> 
                                     Lihat Google Maps
                                 </button>
                         </a>                        

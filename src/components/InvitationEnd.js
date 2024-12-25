@@ -89,7 +89,7 @@ const InvitationEnd = () => {
                       boxShadow: '0 10px 30px rgba(135,206,235,0.2)',
                       marginLeft: '1rem',
                       marginRight: '1rem',
-                      marginTop: '1.5rem'
+                      marginTop: '2rem'
                   }}
                   >
                   <motion.p
