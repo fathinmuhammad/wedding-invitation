@@ -81,7 +81,7 @@ const InvitationDetails = () => {
           }}
         />
         <motion.h2 className="invitation-couple" whileHover={{ scale: 1.05 }}>
-          Fathin &amp; Fridha
+          Fridha &amp; Fathin
         </motion.h2>
         <motion.p className="wedding-date">
           Sabtu, 01 Februari 2025

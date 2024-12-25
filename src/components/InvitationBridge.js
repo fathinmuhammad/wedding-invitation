@@ -127,82 +127,6 @@ const InvitationBridge = () => {
           Tanpa mengurangi rasa hormat, kami mengundang Anda untuk berkenan menghadiri acara pernikahan kami:
         </motion.p>
 
-            <motion.img
-              src={cowok}
-              alt="cowo"
-              style={{
-                width: "250px",
-                objectFit: "cover",
-                margin: '20px 0',
-                
-              }}
-              animate={{
-                scale: 1,
-              }}
-              transition={{
-                duration: 1.5,   
-                ease: "easeInOut"
-              }}
-            />
-            <motion.h2
-              className="m-0"
-              style={{ 
-                fontSize: "1.5rem",
-                color: '#1762ad',
-                fontFamily: "'Tangerine', serif",
-                textShadow: '0 1px 2px rgba(0,0,0,0.1)',
-                textAlign: 'center',
-                marginBottom: '0rem'
-              }}
-            >
-              Fathin Muhammad Fadhlullah, S.Kom
-            </motion.h2>
-            <motion.p
-              style={{ 
-                fontSize: "1rem",
-                color: '#5F9EA0',
-                fontFamily: "'Poppins', sans-serif",
-                textShadow: '0 1px 2px rgba(0,0,0,0.1)',
-                textAlign: 'center',
-                marginTop: '0rem',
-                fontWeight: 'bold',
-                marginBottom: '0rem'
-              }}
-            >
-              Putra pertama
-            </motion.p>
-            <motion.p 
-              style={{
-                color: '#778899', 
-                fontFamily: "'Poppins', sans-serif", 
-                textShadow: '0 1px 2px rgba(0,0,0,0.1)', 
-                marginTop: "0rem", 
-                marginBottom: '0rem',
-                fontSize: '0.6rem',
-              }}
-            >
-              Bapak Mohamad Yasin dan Ibu Hikmah Isnaniyah
-            </motion.p>
-          {/* </motion.div> */}
-
-          <motion.h2
-            className="font-esthetic my-4"
-            style={{ 
-              fontSize: "2rem",
-              color: '#4682B4',
-              fontFamily: "'Poppins', sans-serif",
-              fontWeight: 'bold',
-              textShadow: '0 1px 2px rgba(0,0,0,0.1)',
-              textAlign: 'center',
-              marginBottom: '0rem',
-            }}
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.5, delay: 1.2 }}
-          >
-            &amp;
-          </motion.h2>
-
           <motion.div
             initial={{ x: 100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
@@ -259,12 +183,86 @@ const InvitationBridge = () => {
                 color: '#778899', 
                 fontFamily: "'Poppins', sans-serif", 
                 textShadow: '0 1px 2px rgba(0,0,0,0.1)', 
+                marginTop: "0rem",                 
+                fontSize: '0.6rem',
+              }}
+            >
+              Bapak Agus Muhayar dan Ibu Husada Prawati
+            </motion.p>
+
+            <motion.h2
+              className="font-esthetic my-4"
+              style={{ 
+                fontSize: "2rem",
+                color: '#4682B4',
+                fontFamily: "'Poppins', sans-serif",
+                fontWeight: 'bold',
+                textShadow: '0 1px 2px rgba(0,0,0,0.1)',
+                textAlign: 'center',
+                marginBottom: '0rem',
+              }}
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 0.5, delay: 1.2 }}
+            >
+              &amp;
+            </motion.h2>
+
+            <motion.img
+              src={cowok}
+              alt="cowo"
+              style={{
+                width: "250px",
+                objectFit: "cover",
+                margin: '20px 0',
+                
+              }}
+              animate={{
+                scale: 1,
+              }}
+              transition={{
+                duration: 1.5,   
+                ease: "easeInOut"
+              }}
+            />
+            <motion.h2
+              className="m-0"
+              style={{ 
+                fontSize: "1.5rem",
+                color: '#1762ad',
+                fontFamily: "'Tangerine', serif",
+                textShadow: '0 1px 2px rgba(0,0,0,0.1)',
+                textAlign: 'center',
+                marginBottom: '0rem'
+              }}
+            >
+              Fathin Muhammad Fadhlullah, S.Kom
+            </motion.h2>
+            <motion.p
+              style={{ 
+                fontSize: "1rem",
+                color: '#5F9EA0',
+                fontFamily: "'Poppins', sans-serif",
+                textShadow: '0 1px 2px rgba(0,0,0,0.1)',
+                textAlign: 'center',
+                marginTop: '0rem',
+                fontWeight: 'bold',
+                marginBottom: '0rem'
+              }}
+            >
+              Putra pertama
+            </motion.p>
+            <motion.p 
+              style={{
+                color: '#778899', 
+                fontFamily: "'Poppins', sans-serif", 
+                textShadow: '0 1px 2px rgba(0,0,0,0.1)', 
                 marginTop: "0rem", 
                 marginBottom: '6rem',
                 fontSize: '0.6rem',
               }}
             >
-              Bapak Agus Muhayar dan Ibu Husada Prawati
+              Bapak Mohamad Yasin dan Ibu Hikmah Isnaniyah
             </motion.p>
           </motion.div>
         {/* </div> */}

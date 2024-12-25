@@ -27,7 +27,7 @@ const InvitationPage = ({ onOpen }) => {
         }}
       />
       <h2 className="invitation-title">THE WEDDING OF</h2>
-      <h1 className="invitation-couple">Fathin & Fridha</h1>
+      <h1 className="invitation-couple">Fridha & Fathin</h1>
       <p className="invitation-text">Kepada Bapak/Ibu/Saudara/i</p>
       <strong className="guest-name">{guestName}</strong>
       <p className="invitation-text">Di tempat</p>
