@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { postComment, fetchComments } from "../api"; // Pastikan API diimport dengan benar
+import { postComment, fetchComments } from "../api";
 import Swal from "sweetalert2";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPersonCircleQuestion } from "@fortawesome/free-solid-svg-icons";
@@ -10,10 +10,11 @@ const CommentForm = () => {
   const [attendance, setAttendance] = useState("");
   const [message, setMessage] = useState("");
   const [comments, setComments] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
-  // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
 
     if (!name || !attendance || !message) {
       Swal.fire({
@@ -22,13 +23,14 @@ const CommentForm = () => {
         icon: "warning",
         confirmButtonText: "OK",
       });
+      setIsLoading(false);
       return;
     }
 
     const newComment = { name, attendance, message };
     try {
-      await postComment(newComment); // Simpan komentar ke database
-      setComments([...comments, newComment]); // Tambahkan komentar baru ke daftar
+      await postComment(newComment);
+      setComments([...comments, newComment]);
       setName("");
       setAttendance("");
       setMessage("");
@@ -41,36 +43,21 @@ const CommentForm = () => {
         timerProgressBar: true,
       });
     } catch (error) {
-      if (error.message.includes("CORS")) {
-        Swal.fire({
-          title: "Gagal!",
-          text: "Gagal mengirim komentar karena masalah CORS. Silakan coba lagi dengan menggunakan proxy atau mengaktifkan CORS di server.",
-          icon: "error",
-          confirmButtonText: "OK",
-        });
-      } else if (error.message.includes("Forbidden")) {
-        Swal.fire({
-          title: "Gagal!",
-          text: "Gagal mengirim komentar karena akses ditolak. Silakan periksa izin akses Anda.",
-          icon: "error",
-          confirmButtonText: "OK",
-        });
-      } else {
-        Swal.fire({
-          title: "Gagal!",
-          text: "Gagal mengirim komentar. Silakan coba lagi.",
-          icon: "error",
-          confirmButtonText: "OK",
-        });
-      }
+      Swal.fire({
+        title: "Gagal!",
+        text: error.message.includes("CORS") ? "Gagal mengirim komentar karena masalah CORS. Silakan coba lagi dengan menggunakan proxy atau mengaktifkan CORS di server." : error.message.includes("Forbidden") ? "Gagal mengirim komentar karena akses ditolak. Silakan periksa izin akses Anda." : "Gagal mengirim komentar. Silakan coba lagi.",
+        icon: "error",
+        confirmButtonText: "OK",
+      });
+    } finally {
+      setIsLoading(false);
     }
   };
 
-  // Fetch comments on mount
   useEffect(() => {
     const loadComments = async () => {
       try {
-        const data = await fetchComments(); // Ambil komentar dari server
+        const data = await fetchComments();
         setComments(data);
       } catch (error) {
         console.error("Gagal memuat komentar:", error);
@@ -84,7 +71,7 @@ const CommentForm = () => {
       className="invitation-bridge"
       style={{
         minHeight: "100vh",
-        background: "linear-gradient(rgba(240,248,255,0.9), rgba(176,216,255,0.9))", // Soft blue gradient
+        background: "linear-gradient(rgba(240,248,255,0.9), rgba(176,216,255,0.9))",
         fontFamily: "'Playfair Display', serif",
         padding: "2rem 1rem",
         position: "relative",
@@ -120,7 +107,6 @@ const CommentForm = () => {
           Ucapan &amp; Doa
         </h2>
 
-        {/* Input Nama */}
         <div className="mb-4">
           <label
             htmlFor="form-name"
@@ -153,7 +139,6 @@ const CommentForm = () => {
           />
         </div>
 
-        {/* Dropdown Presensi */}
         <motion.div
           className="mb-4"
           initial={{ opacity: 0, y: 50 }}
@@ -162,7 +147,7 @@ const CommentForm = () => {
         >
           <label
             htmlFor="form-presence"
-            className="form-label mb-2" // Tambahkan margin bottom untuk jarak spasi
+            className="form-label mb-2"
             style={{
               fontSize: "1rem",
               fontFamily: "'Poppins', sans-serif",
@@ -197,7 +182,6 @@ const CommentForm = () => {
           </select>
         </motion.div>
 
-        {/* Textarea Ucapan */}
         <div className="mb-4">
           <label
             htmlFor="form-comment"
@@ -230,7 +214,6 @@ const CommentForm = () => {
           ></textarea>
         </div>
 
-        {/* Submit Button */}
         <div className="d-grid">
           <button
             type="submit"
@@ -246,8 +229,9 @@ const CommentForm = () => {
             }}
             onMouseOver={(e) => (e.target.style.backgroundColor = "#36648b")}
             onMouseOut={(e) => (e.target.style.backgroundColor = "#4682B4")}
+            disabled={isLoading}
           >
-            Submit
+            {isLoading ? "Mengirim..." : "Kirim Ucapan"}
           </button>
         </div>
       </motion.form>

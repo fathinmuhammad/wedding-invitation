@@ -6,7 +6,12 @@ import bgImage from "../assets/images/bg.png";
 
 const InvitationDetails = () => {
   return (
-    <div className="invitation-details">
+    <motion.div
+      className="invitation-details"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
       <motion.section
         id="home"
         className="invitation-section"
@@ -59,66 +64,58 @@ const InvitationDetails = () => {
           }}
         ></motion.div>
 
-        <motion.div className="content">
-          <motion.h1 className="title" whileHover={{ scale: 1.05 }}>
-            Wedding Invitation
-          </motion.h1>
-
-          <motion.img
-            src={bgImage}
-            alt="Fathin & Fridha"
-            className="profile-img"
-            whileHover={{ scale: 1.1 }}
-            animate={{
-              scale: 1,
-            }}
-            transition={{
-              duration: 1.5,   
-              ease: "easeInOut"
-            }}
-          />
-
-          <motion.h2 className="invitation-couple" whileHover={{ scale: 1.05 }}>
-            Fathin &amp; Fridha
-          </motion.h2>
-
-          <motion.p className="wedding-date">
-            Sabtu, 01 Februari 2025
-          </motion.p>
-
-          <a
-            href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=M3I1aHRlOTdlYTM4NzNldGpxdnZmM2duaG8gZmF0aGlubXVoYW1tYWQ0MEBt&tmsrc=fathinmuhammad40%40gmail.com"
-            target="_blank"
-            className="save-date-btn"
-          >
-            <button>
-              <FontAwesomeIcon icon={faCalendarCheck} className="icon" />{" "}
-              <span>Save The Date</span>
-            </button>
-          </a>
-
-          <motion.div
-            className="scroll-indicator"
-            animate={{ y: [0, 10, 0] }}
-            transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
-          >
-            <div className="mouse">
-              <motion.div
-                className="scroll-animation"
-                animate={{ y: [0, 20, 0] }}
-                transition={{
-                  repeat: Infinity,
-                  duration: 1.5,
-                  ease: "easeInOut",
-                }}
-              ></motion.div>
-            </div>
-          </motion.div>
-
-          <motion.p className="scroll-text">Scroll Down</motion.p>
+        <motion.h1 className="title" whileHover={{ scale: 1.05 }}>
+          Wedding Invitation
+        </motion.h1>
+        <motion.img
+          src={bgImage}
+          alt="Fathin & Fridha"
+          className="profile-img"
+          initial={{ scale: 0 }} 
+          animate={{
+            scale: 1,
+          }}
+          transition={{
+            duration: 1.5,   
+            ease: "easeInOut"
+          }}
+        />
+        <motion.h2 className="invitation-couple" whileHover={{ scale: 1.05 }}>
+          Fathin &amp; Fridha
+        </motion.h2>
+        <motion.p className="wedding-date">
+          Sabtu, 01 Februari 2025
+        </motion.p>
+        <a
+          href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=M3I1aHRlOTdlYTM4NzNldGpxdnZmM2duaG8gZmF0aGlubXVoYW1tYWQ0MEBt&tmsrc=fathinmuhammad40%40gmail.com"
+          target="_blank"
+          className="save-date-btn"
+        >
+          <button>
+            <FontAwesomeIcon icon={faCalendarCheck} className="icon" />{" "}
+            <span>Save The Date</span>
+          </button>
+        </a>
+        <motion.div
+          className="scroll-indicator"
+          animate={{ y: [0, 10, 0] }}
+          transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+        >
+          <div className="mouse">
+            <motion.div
+              className="scroll-animation"
+              animate={{ y: [0, 20, 0] }}
+              transition={{
+                repeat: Infinity,
+                duration: 1.5,
+                ease: "easeInOut",
+              }}
+            ></motion.div>
+          </div>
         </motion.div>
+        <motion.p className="scroll-text">Scroll Down</motion.p>
       </motion.section>
-    </div>
+    </motion.div>
   );
 };
 

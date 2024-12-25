@@ -1,5 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 const images = [
   { id: 1, src: require("../assets/imagesKita/1.jpeg") },
@@ -7,7 +12,7 @@ const images = [
   { id: 3, src: require("../assets/imagesKita/3.jpeg") },
   { id: 4, src: require("../assets/imagesKita/4.jpeg") },
   { id: 5, src: require("../assets/imagesKita/5.jpeg") },
-  { id: 5, src: require("../assets/imagesKita/6.jpeg") },
+  { id: 6, src: require("../assets/imagesKita/6.jpeg") },
 ];
 
 const InvitationGallery = () => {
@@ -24,14 +29,14 @@ const InvitationGallery = () => {
     >
       <motion.section
         style={{
-          minHeight: '100vh',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          boxShadow: '0 10px 30px rgba(135,206,235,0.2)',
-          borderRadius: '10px',
-          margin: '20px 0',
-          background: 'white'
+          minHeight: "100vh",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          boxShadow: "0 10px 30px rgba(135,206,235,0.2)",
+          borderRadius: "10px",
+          margin: "20px 0",
+          background: "white",
         }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -46,6 +51,8 @@ const InvitationGallery = () => {
         >
           Galeri Foto
         </h2>
+
+        {/* Grid View */}
         <div
           className="gallery-grid"
           style={{
@@ -53,14 +60,14 @@ const InvitationGallery = () => {
             gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))",
             gap: "1rem",
             padding: "1rem",
+            marginBottom: "1rem",
           }}
         >
           {images.map((image) => (
             <motion.div
               key={image.id}
               className="gallery-item"
-              whileInView={{ scale: 1 }}
-              viewport={{ once: true }}
+              whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
               style={{
                 overflow: "hidden",
@@ -70,7 +77,7 @@ const InvitationGallery = () => {
             >
               <img
                 src={image.src}
-                alt={`Foto ${image.id}`}
+                alt={`Foto ke-${image.id}`}
                 style={{
                   width: "100%",
                   height: "auto",
@@ -80,6 +87,53 @@ const InvitationGallery = () => {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          className="gallery-swiper"
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 0.5 }}
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            padding: "2rem",
+            margin: "1rem",
+            backgroundColor: "#fff",
+            width: '80%'
+          }}
+        >
+          {/* Swiper Carousel */}
+          <Swiper
+            modules={[Pagination, Autoplay]}
+            spaceBetween={30}
+            slidesPerView={1}
+            pagination={{ clickable: true }}
+            autoplay={{ delay: 3000 }}
+            style={{
+              width: "100%",
+              maxWidth: "800px",
+              borderRadius: "10px",
+              overflow: "hidden",
+            }}
+          >
+            {images.map((image) => (
+              <SwiperSlide key={image.id}>
+                <img
+                  src={image.src}
+                  alt={`Swiper foto ke-${image.id}`}
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                    objectFit: "cover",
+                  }}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </motion.div>
+
       </motion.section>
     </div>
   );
