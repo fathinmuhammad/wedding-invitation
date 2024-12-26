@@ -29,7 +29,7 @@ const InvitationPage = ({ onOpen }) => {
       <h2 className="invitation-title">THE WEDDING OF</h2>
       <h1 className="invitation-couple">Fridha & Fathin</h1>
       <p className="invitation-text">Kepada Bapak/Ibu/Saudara/i</p>
-      <strong className="guest-name">{guestName}</strong>
+      <p className="guest-name"><strong>{guestName}</strong></p>
       <p className="invitation-text">Di tempat</p>
       <button className="invitation-button" onClick={onOpen}>
         Buka Undangan

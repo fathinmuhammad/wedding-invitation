@@ -113,7 +113,7 @@ const InvitationWeddingDate = () => {
                         color: '#1762ad',
                         marginLeft: '1rem',
                         marginRight: '1rem',
-                        marginTop: '2rem' 
+                        marginTop: '4rem' 
                     }}
                     initial={{ y: 20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
@@ -148,7 +148,7 @@ const InvitationWeddingDate = () => {
                         <motion.p
                         className="p-1 mb-3"
                         style={{ 
-                            fontSize: '0.95rem', 
+                            fontSize: '0.6rem', 
                             color: '#778899', 
                             textAlign: 'justify', 
                             marginTop: '1rem', 
@@ -189,140 +189,66 @@ const InvitationWeddingDate = () => {
                     <motion.h2 className="font-esthetic py-4 m-0" style={{ fontSize: '2rem', color: '#1762ad', fontFamily: "'Poppins', sans-serif", marginBottom: "0rem" }} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>Moment Bahagia</motion.h2>
     
                     <div
-                        className="border rounded-pill shadow py-2 px-4 mt-2 mb-4"
+                        className="border rounded-pill shadow py-2 px-3 mt-2 mb-4"
                         style={{
                             display: "grid",
                             gridTemplateColumns: "repeat(7, auto)",
-                            gap: "0.5rem",
+                            gap: "0.3rem",
                             alignItems: "center",
-                            justifyItems: "center",
-                            // boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
-                            marginLeft: '3rem',
-                            marginRight: '3rem',
+                            justifyContent: "center", 
+                            margin: '0.2rem',
+                            // backgroundColor: '#f0f8ff',
+                            // boxShadow: '0 3px 8px rgba(0, 0, 0, 0.1)',
+                            borderRadius: '10px',
                         }}
-                        >
-                        {/* Hari */}
-                        <div className="text-center">
-                            <motion.h2
-                            className="m-0"
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 1 }}
-                            style={{
-                                fontSize: "1.5rem",
-                                fontFamily: "Arial, sans-serif",
-                                color: "#1762ad",
-                                fontWeight: "bold",
-                            }}
-                            >
-                            {timeLeft.days}
-                            </motion.h2>
-                            <small
-                            style={{
-                                fontSize: "1rem",
-                                fontFamily: "Arial, sans-serif",
-                                color: "#778899",
-                            }}
-                            >
-                            Hari
-                            </small>
-                        </div>
+                    >
+                        {['days', 'hours', 'minutes', 'seconds'].map((unit, index) => (
+                            <React.Fragment key={unit}>
+                                {index > 0 && (
+                                    <span style={{ fontSize: "1.4rem", color: "#1762ad", fontWeight: "bold" }}>
+                                        :
+                                    </span>
+                                )}
+                                <div
+                                    className="text-center d-flex flex-column justify-content-center align-items-center"
+                                    style={{
+                                        border: '2px solid #87ceeb',
+                                        backgroundColor: 'rgba(135, 206, 235, 0.2)',
+                                        padding: '0.4rem 0.8rem',
+                                        borderRadius: '6px',
+                                        // boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
+                                    }}
+                                >
+                                    <motion.h2
+                                        className="m-0"
+                                        initial={{ opacity: 0, y: 20 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 1 }}
+                                        style={{
+                                            fontSize: "1rem",
+                                            fontFamily: "'Poppins', sans-serif",
+                                            color: "#1762ad",
+                                            fontWeight: "bold",
+                                            letterSpacing: '1px',
+                                        }}
+                                    >
+                                        {timeLeft[unit]}
+                                    </motion.h2>
+                                    <small
+                                        style={{
+                                            fontSize: "0.8rem",
+                                            fontFamily: "'Poppins', sans-serif",
+                                            color: "#778899",
+                                            fontWeight: '500',
+                                        }}
+                                    >
+                                        {unit === 'days' ? 'Hari' : unit === 'hours' ? 'Jam' : unit === 'minutes' ? 'Menit' : 'Detik'}
+                                    </small>
+                                </div>
+                            </React.Fragment>
+                        ))}
+                    </div>
 
-                        <span style={{ fontSize: "1.5rem", color: "#1762ad", fontWeight: "bold" }}>
-                            :
-                        </span>
-
-                        {/* Jam */}
-                        <div className="text-center">
-                            <motion.h2
-                            className="m-0"
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 1 }}
-                            style={{
-                                fontSize: "1.5rem",
-                                fontFamily: "Arial, sans-serif",
-                                color: "#1762ad",
-                                fontWeight: "bold",
-                            }}
-                            >
-                            {timeLeft.hours}
-                            </motion.h2>
-                            <small
-                            style={{
-                                fontSize: "1rem",
-                                fontFamily: "Arial, sans-serif",
-                                color: "#778899",
-                            }}
-                            >
-                            Jam
-                            </small>
-                        </div>
-
-                        {/* Separator ':' */}
-                        <span style={{ fontSize: "1.5rem", color: "#1762ad", fontWeight: "bold" }}>
-                            :
-                        </span>
-
-                        {/* Menit */}
-                        <div className="text-center">
-                            <motion.h2
-                            className="m-0"
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 1 }}
-                            style={{
-                                fontSize: "1.5rem",
-                                fontFamily: "Arial, sans-serif",
-                                color: "#1762ad",
-                                fontWeight: "bold",
-                            }}
-                            >
-                            {timeLeft.minutes}
-                            </motion.h2>
-                            <small
-                            style={{
-                                fontSize: "1rem",
-                                fontFamily: "Arial, sans-serif",
-                                color: "#778899",
-                            }}
-                            >
-                            Menit
-                            </small>
-                        </div>
-
-                        {/* Separator ':' */}
-                        <span style={{ fontSize: "1.5rem", color: "#1762ad", fontWeight: "bold" }}>
-                            :
-                        </span>
-
-                        {/* Detik */}
-                        <div className="text-center">
-                            <motion.h2
-                            className="m-0"
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 1 }}
-                            style={{
-                                fontSize: "1.5rem",
-                                fontFamily: "Arial, sans-serif",
-                                color: "#1762ad",
-                                fontWeight: "bold",
-                            }}
-                            >
-                            {timeLeft.seconds}
-                            </motion.h2>
-                            <small
-                            style={{
-                                fontSize: "1rem",
-                                fontFamily: "Arial, sans-serif",
-                                color: "#778899",
-                            }}
-                            >
-                            Detik
-                            </small>
-                        </div>
-                        </div>
 
     
                     <motion.p className="py-2 m-0" 
