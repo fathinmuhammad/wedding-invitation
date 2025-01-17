@@ -313,7 +313,7 @@ const CommentForm = () => {
                           marginTop: '0.3rem'
                         }}
                       >
-                        {comment.name.split(' ')[0][0].toUpperCase() + (comment.name.split(' ').length > 1 ? comment.name.split(' ')[comment.name.split(' ').length - 1][0].toUpperCase() : '')}
+                        {comment.name.split(' ')[0] ? comment.name.split(' ')[0][0].toUpperCase() : ''} {comment.name.split(' ').length > 1 && comment.name.split(' ')[comment.name.split(' ').length - 1] ? comment.name.split(' ')[comment.name.split(' ').length - 1][0].toUpperCase() : ''}
                       </div>
 
                       {/* Comment Content */}
