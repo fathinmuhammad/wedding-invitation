@@ -186,8 +186,12 @@ const InvitationWeddingDate = () => {
                         </a>
                     </motion.div>
 
-                    <motion.h2 className="font-esthetic py-4 m-0" style={{ fontSize: '2rem', color: '#1762ad', fontFamily: "'Poppins', sans-serif", marginBottom: "0rem" }} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>Moment Bahagia</motion.h2>
+                    <motion.h2 className="font-esthetic py-4 m-0" style={{ fontSize: '2rem', color: '#1762ad', fontFamily: "'Poppins', sans-serif", marginBottom: "0rem" }} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>Momen Bahagia</motion.h2>
     
+                    <motion.p className="wedding-date">
+                        Sabtu, 01 Februari 2025
+                    </motion.p>
+
                     <div
                         className="border rounded-pill shadow py-2 px-3 mt-2 mb-4"
                         style={{
