@@ -337,7 +337,7 @@ const InvitationWeddingDate = () => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 1 }}
                             whileHover={{ scale: 1.05 }}>
-                                    Gg. H. Togog 2, Kel. Pondok Aren, Kec. Pondok Aren, Kota Tangerang Selatan, Banten 15224
+                                    Jl. Puskesmas Pondok Aren, Gg. H. Togog 2, RT004/RW011 No.71, Kel. Pondok Aren, Kec. Pondok Aren, Kota Tangerang Selatan, Banten 15224
                         </motion.small>
                     </div>
                 </div>
